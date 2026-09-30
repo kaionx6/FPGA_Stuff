@@ -98,7 +98,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/project_1/project_1.srcs/constrs_1/imports/FPGA_Stuff/Nexys-4-Master.xdc
+set_property used_in_implementation false [get_files C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/project_1/project_1.srcs/constrs_1/imports/FPGA_Stuff/Nexys-4-Master.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/project_1/project_1.srcs/utils_1/imports/synth_1/full_adder.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

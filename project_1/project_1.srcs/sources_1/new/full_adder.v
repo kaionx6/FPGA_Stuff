@@ -20,22 +20,22 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module full_adder(
-    input A,
-    input B,
-    input CIN,
-    output reg SUM,
-    output reg COUT
-    );
-    
-    reg p, g ;
-    
-    always@ (A, B, CIN)
-        begin 
-            p = A ^ B ;
-            g = A & B ;
-            SUM <= p ^ CIN ;
-            COUT <= g | (p & CIN) ;
-        end
-        
+module full_adder (
+
+input A,
+input B,
+input CIN,
+output SUM,
+output COUT
+
+);
+
+wire prop;
+
+assign prop = A^B;
+assign SUM = prop ^ CIN;
+assign COUT= (A & B) | (prop & CIN);
+
 endmodule
+
+

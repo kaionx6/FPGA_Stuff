@@ -1,9 +1,9 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Wed Sep 30 22:46:24 2026
+| Date         : Wed Sep 30 22:48:06 2026
 | Host         : KelvinPC running 64-bit major release  (build 9200)
-| Command      : report_utilization -file full_adder_utilization_synth.rpt -pb full_adder_utilization_synth.pb
+| Command      : report_utilization -file C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/project_1/utilization_report.txt -name utilization_1
 | Design       : full_adder
 | Device       : xc7a100tcsg324-1
 | Speed File   : -1
@@ -92,7 +92,9 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |    5 |     0 |          0 |       210 |  2.38 |
+| Bonded IOB                  |    5 |     5 |          0 |       210 |  2.38 |
+|   IOB Master Pads           |    2 |       |            |           |       |
+|   IOB Slave Pads            |    2 |       |            |           |       |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |          0 |         6 |  0.00 |
