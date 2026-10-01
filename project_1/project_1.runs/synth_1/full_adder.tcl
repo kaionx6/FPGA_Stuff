@@ -70,10 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache C:/Users/gaoke/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-47248-KelvinPC/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
+set_param chipscope.maxJobs 5
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -98,8 +96,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/project_1/project_1.srcs/constrs_1/imports/FPGA_Stuff/Nexys-4-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/project_1/project_1.srcs/constrs_1/imports/FPGA_Stuff/Nexys-4-Master.xdc]
+read_xdc C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Nexys-A7-100T-Master.xdc
+set_property used_in_implementation false [get_files C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Nexys-A7-100T-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 

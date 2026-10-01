@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1790804762" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/full_adder.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1790849193" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/full_adder.dcp">
   <File Type="PA-TCL" Name="full_adder.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="full_adder_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="full_adder_reports.tcl"/>
   <File Type="RDS-RDS" Name="full_adder.vds"/>
   <File Type="RDS-UTIL" Name="full_adder_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="full_adder_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="full_adder.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="full_adder_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="full_adder_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/full_adder.v">
@@ -23,10 +26,8 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/imports/FPGA_Stuff/Nexys-4-Master.xdc">
+    <File Path="$PPRDIR/../Nexys-A7-100T-Master.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Nexys-4-Master.xdc"/>
-        <Attr Name="ImportTime" Val="1790804525"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>

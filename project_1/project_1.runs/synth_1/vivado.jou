@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Wed Sep 30 22:46:04 2026
-# Process ID: 51348
+# Start of session at: Thu Oct  1 11:06:40 2026
+# Process ID: 11872
 # Current directory: C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/project_1/project_1.runs/synth_1
 # Command line: vivado.exe -log full_adder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source full_adder.tcl
 # Log file: C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/project_1/project_1.runs/synth_1/full_adder.vds
 # Journal file: C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/project_1/project_1.runs/synth_1\vivado.jou
-# Running On: KelvinPC, OS: Windows, CPU Frequency: 4300 MHz, CPU Physical cores: 32, Host memory: 134658 MB
+# Running On: Kelvin, OS: Windows, CPU Frequency: 2995 MHz, CPU Physical cores: 14, Host memory: 16791 MB
 #-----------------------------------------------------------
 source full_adder.tcl -notrace

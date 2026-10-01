@@ -10,13 +10,13 @@
 	#create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk]
  
 ## Switches
-##Bank = 34, Pin name = IO_L21P_T3_DQS_34,					Sch name = SW0
+#Bank = 34, Pin name = IO_L21P_T3_DQS_34,					Sch name = SW0
 set_property PACKAGE_PIN U9 [get_ports A]					
 	set_property IOSTANDARD LVCMOS33 [get_ports A]
-##Bank = 34, Pin name = IO_25_34,							Sch name = SW1
+#Bank = 34, Pin name = IO_25_34,							Sch name = SW1
 set_property PACKAGE_PIN U8 [get_ports B]					
 	set_property IOSTANDARD LVCMOS33 [get_ports B]
-##Bank = 34, Pin name = IO_L23P_T3_34,						Sch name = SW2
+#Bank = 34, Pin name = IO_L23P_T3_34,						Sch name = SW2
 set_property PACKAGE_PIN R7 [get_ports CIN]					
 	set_property IOSTANDARD LVCMOS33 [get_ports CIN]
 ##Bank = 34, Pin name = IO_L19P_T3_34,						Sch name = SW3
@@ -62,10 +62,10 @@ set_property PACKAGE_PIN R7 [get_ports CIN]
 
 
 ## LEDs
-##Bank = 34, Pin name = IO_L24N_T3_34,						Sch name = LED0
+#Bank = 34, Pin name = IO_L24N_T3_34,						Sch name = LED0
 set_property PACKAGE_PIN T8 [get_ports SUM]					
 	set_property IOSTANDARD LVCMOS33 [get_ports SUM]
-##Bank = 34, Pin name = IO_L21N_T3_DQS_34,					Sch name = LED1
+#Bank = 34, Pin name = IO_L21N_T3_DQS_34,					Sch name = LED1
 set_property PACKAGE_PIN V9 [get_ports COUT]					
 	set_property IOSTANDARD LVCMOS33 [get_ports COUT]
 ##Bank = 34, Pin name = IO_L24P_T3_34,						Sch name = LED2
