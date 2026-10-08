@@ -1,0 +1,17 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sim_1/imports/Lab_1/tb_board_support.sv,1791382294,systemVerilog,,,,tb_board_support,,uvm,,,,,,
+C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/Lab_1/boolean_display_adapter.v,1791382102,verilog,,C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/Lab_1/clockReset7Series.v,,boolean_display_adapter,,uvm,,,,,,
+C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/Lab_1/clockReset7Series.v,1791382102,verilog,,C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/Lab_1/digit_driver.v,,clockReset7Series,,uvm,,,,,,
+C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/Lab_1/digit_driver.v,1791382102,verilog,,C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/Lab_1/digit_selector.v,,digit_driver,,uvm,,,,,,
+C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/Lab_1/digit_selector.v,1791382102,verilog,,C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/Lab_1/displayBoardCore.v,,digit_selector,,uvm,,,,,,
+C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/Lab_1/displayBoardCore.v,1791382102,verilog,,C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/Lab_1/displayInterface.v,,displayBoardCore,,uvm,,,,,,
+C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/Lab_1/displayInterface.v,1791382102,verilog,,C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/Lab_1/displayTestBoolean.v,,displayInterface,,uvm,,,,,,
+C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/Lab_1/displayTestBoolean.v,1791382102,verilog,,C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/Lab_1/displayTestNexys.v,,displayTestBoolean,,uvm,,,,,,
+C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/Lab_1/displayTestNexys.v,1791382102,verilog,,C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/hex2seg.v,,displayTestNexys,,uvm,,,,,,
+C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/Lab_1/scan_controller.v,1791382102,verilog,,C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/Lab_1/segment_driver.v,,scan_controller,,uvm,,,,,,
+C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/Lab_1/segment_driver.v,1791382102,verilog,,,,segment_driver,,uvm,,,,,,
+C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/hex2seg.v,1790849433,verilog,,C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1/Lab_1.srcs/sources_1/imports/FPGA_Stuff/Lab_1/scan_controller.v,,hex2seg,,uvm,,,,,,

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1791452235" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/displayTestBoolean.dcp">
+  <File Type="PA-TCL" Name="displayTestNexys.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="displayTestNexys_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="displayTestNexys_reports.tcl"/>
+  <File Type="RDS-RDS" Name="displayTestNexys.vds"/>
+  <File Type="RDS-UTIL" Name="displayTestNexys_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="displayTestNexys_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="displayTestNexys.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="displayTestNexys_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="displayTestNexys_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/Lab_1/clockReset7Series.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/clockReset7Series.v"/>
+        <Attr Name="ImportTime" Val="1791382102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/Lab_1/digit_driver.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/digit_driver.v"/>
+        <Attr Name="ImportTime" Val="1791382102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/Lab_1/digit_selector.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/digit_selector.v"/>
+        <Attr Name="ImportTime" Val="1791382102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/Lab_1/displayBoardCore.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/displayBoardCore.v"/>
+        <Attr Name="ImportTime" Val="1791382102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/Lab_1/displayInterface.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/displayInterface.v"/>
+        <Attr Name="ImportTime" Val="1791382102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/hex2seg.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../hex2seg.v"/>
+        <Attr Name="ImportTime" Val="1790849433"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/Lab_1/scan_controller.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/scan_controller.v"/>
+        <Attr Name="ImportTime" Val="1791382102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/Lab_1/segment_driver.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/segment_driver.v"/>
+        <Attr Name="ImportTime" Val="1791382102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/Lab_1/displayTestNexys.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/displayTestNexys.v"/>
+        <Attr Name="ImportTime" Val="1791382102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/Lab_1/boolean_display_adapter.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/boolean_display_adapter.v"/>
+        <Attr Name="ImportTime" Val="1791382102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/Lab_1/displayTestBoolean.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/displayTestBoolean.v"/>
+        <Attr Name="ImportTime" Val="1791382102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="displayTestNexys"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Lab_1/Nexys_A7_Display.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Nexys_A7_Display.xdc"/>
+        <Attr Name="ImportTime" Val="1791382906"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/displayTestBoolean.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1791452695">
+  <File Type="ROUTE-PWR" Name="displayTestNexys_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="displayTestNexys.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="displayTestNexys_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="displayTestNexys_reports.tcl"/>
+  <File Type="OPT-RQA-PB" Name="displayTestNexys_rqa_opted.pb"/>
+  <File Type="BITSTR-MMI" Name="displayTestNexys.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="displayTestNexys_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="displayTestNexys_timing_summary_init.rpt"/>
+  <File Type="OPT-TIMING" Name="displayTestNexys_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="displayTestNexys_opt.dcp"/>
+  <File Type="OPT-DRC" Name="displayTestNexys_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="displayTestNexys.hwdef"/>
+  <File Type="PWROPT-DCP" Name="displayTestNexys_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="displayTestNexys_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="displayTestNexys_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="displayTestNexys_placed.dcp"/>
+  <File Type="PLACE-IO" Name="displayTestNexys_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="displayTestNexys_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="displayTestNexys_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="displayTestNexys_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="displayTestNexys_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="displayTestNexys_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="displayTestNexys_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="displayTestNexys.bin"/>
+  <File Type="PLACE-TIMING" Name="displayTestNexys_timing_summary_placed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="displayTestNexys_power_routed.rpx"/>
+  <File Type="PLACE-RQA-PB" Name="displayTestNexys_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="displayTestNexys_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="displayTestNexys.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="displayTestNexys_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="displayTestNexys_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="displayTestNexys_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="displayTestNexys.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="displayTestNexys_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="displayTestNexys_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="displayTestNexys_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="displayTestNexys_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="displayTestNexys_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="displayTestNexys_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="displayTestNexys_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="displayTestNexys_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="displayTestNexys_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="displayTestNexys_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-RQS-PB" Name="displayTestNexys_rqs_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="displayTestNexys_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="displayTestNexys_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="displayTestNexys_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="displayTestNexys_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="displayTestNexys_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="displayTestNexys_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="displayTestNexys_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="displayTestNexys_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="displayTestNexys_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="displayTestNexys_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="displayTestNexys_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="displayTestNexys_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="displayTestNexys_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="displayTestNexys_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="displayTestNexys_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="displayTestNexys_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="displayTestNexys.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="displayTestNexys_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="displayTestNexys_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="displayTestNexys.nky"/>
+  <File Type="BITSTR-BMM" Name="displayTestNexys_bd.bmm"/>
+  <File Type="PDI-FILE" Name="displayTestNexys.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="displayTestNexys_boot.pdi"/>
+  <File Type="PL-PDI-FILE" Name="displayTestNexys_pld.pdi"/>
+  <File Type="RCFI_FILE" Name="displayTestNexys.rcfi"/>
+  <File Type="CFI_FILE" Name="displayTestNexys.cfi"/>
+  <File Type="RNPI_FILE" Name="displayTestNexys.rnpi"/>
+  <File Type="NPI_FILE" Name="displayTestNexys.npi"/>
+  <File Type="RBD_FILE" Name="displayTestNexys.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="displayTestNexys.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="displayTestNexys.sysdef"/>
+  <File Type="BG-BGN" Name="displayTestNexys.bgn"/>
+  <File Type="BG-DRC" Name="displayTestNexys.drc"/>
+  <File Type="RDI-RDI" Name="displayTestNexys.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-RQS" Name="displayTestNexys_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="displayTestNexys_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/Lab_1/clockReset7Series.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/clockReset7Series.v"/>
+        <Attr Name="ImportTime" Val="1791382102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/Lab_1/digit_driver.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/digit_driver.v"/>
+        <Attr Name="ImportTime" Val="1791382102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/Lab_1/digit_selector.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/digit_selector.v"/>
+        <Attr Name="ImportTime" Val="1791382102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/Lab_1/displayBoardCore.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/displayBoardCore.v"/>
+        <Attr Name="ImportTime" Val="1791382102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/Lab_1/displayInterface.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/displayInterface.v"/>
+        <Attr Name="ImportTime" Val="1791382102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/hex2seg.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../hex2seg.v"/>
+        <Attr Name="ImportTime" Val="1790849433"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/Lab_1/scan_controller.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/scan_controller.v"/>
+        <Attr Name="ImportTime" Val="1791382102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/Lab_1/segment_driver.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/segment_driver.v"/>
+        <Attr Name="ImportTime" Val="1791382102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/Lab_1/displayTestNexys.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/displayTestNexys.v"/>
+        <Attr Name="ImportTime" Val="1791382102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/Lab_1/boolean_display_adapter.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/boolean_display_adapter.v"/>
+        <Attr Name="ImportTime" Val="1791382102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/Lab_1/displayTestBoolean.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/displayTestBoolean.v"/>
+        <Attr Name="ImportTime" Val="1791382102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="displayTestNexys"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Lab_1/Nexys_A7_Display.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Nexys_A7_Display.xdc"/>
+        <Attr Name="ImportTime" Val="1791382906"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/displayTestBoolean.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>
