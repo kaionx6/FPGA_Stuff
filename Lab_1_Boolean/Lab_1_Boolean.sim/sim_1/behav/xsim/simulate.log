@@ -1,0 +1,7 @@
+Time resolution is 1 ps
+PASS: N=5 SLOT_CYCLES=2, 5160 clock-edge checks
+PASS: N=5 SLOT_CYCLES=8, 20622 clock-edge checks
+PASS: N=6 SLOT_CYCLES=10, 61646 clock-edge checks
+PASS: N=5 SLOT_CYCLES=5000, 85006 clock-edge checks
+PASS: displayInterface - scan order, all symbols/dot masks, blanking, held data, reset, and hardware timing
+$finish called at time : 17001200 ns : File "C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1_Boolean/Lab_1_Boolean.srcs/sim_1/imports/sim/tb_displayInterface.sv" Line 118
