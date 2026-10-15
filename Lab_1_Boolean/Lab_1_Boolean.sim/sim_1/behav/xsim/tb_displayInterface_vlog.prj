@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Lab_1_Boolean.srcs/sources_1/imports/rtl/digit_driver.v" \
+"../../../../Lab_1_Boolean.srcs/sources_1/imports/rtl/displayInterface.v" \
+"../../../../Lab_1_Boolean.srcs/sources_1/imports/rtl/hex2seg.v" \
+"../../../../Lab_1_Boolean.srcs/sources_1/imports/rtl/scan_select.v" \
+"../../../../Lab_1_Boolean.srcs/sources_1/imports/rtl/segment_driver.v" \
+
+sv xil_defaultlib  \
+"../../../../Lab_1_Boolean.srcs/sim_1/imports/sim/tb_displayInterface.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,11 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1_Boolean/Lab_1_Boolean.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1_Boolean/Lab_1_Boolean.srcs/sim_1/imports/sim/tb_displayInterface.sv,1791478800,systemVerilog,,,,display_checker;tb_displayInterface,,uvm,,,,,,
+C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1_Boolean/Lab_1_Boolean.srcs/sources_1/imports/rtl/digit_driver.v,1791478800,verilog,,C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1_Boolean/Lab_1_Boolean.srcs/sources_1/imports/rtl/displayInterface.v,,digit_driver,,uvm,,,,,,
+C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1_Boolean/Lab_1_Boolean.srcs/sources_1/imports/rtl/displayInterface.v,1791478800,verilog,,C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1_Boolean/Lab_1_Boolean.srcs/sources_1/imports/rtl/hex2seg.v,,displayInterface,,uvm,,,,,,
+C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1_Boolean/Lab_1_Boolean.srcs/sources_1/imports/rtl/hex2seg.v,1791478800,verilog,,C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1_Boolean/Lab_1_Boolean.srcs/sources_1/imports/rtl/scan_select.v,,hex2seg,,uvm,,,,,,
+C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1_Boolean/Lab_1_Boolean.srcs/sources_1/imports/rtl/scan_select.v,1791478800,verilog,,C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1_Boolean/Lab_1_Boolean.srcs/sources_1/imports/rtl/segment_driver.v,,scan_select,,uvm,,,,,,
+C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Lab_1_Boolean/Lab_1_Boolean.srcs/sources_1/imports/rtl/segment_driver.v,1791478800,verilog,,,,segment_driver,,uvm,,,,,,
