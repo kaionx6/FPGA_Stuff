@@ -1,0 +1,18 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Attempt 1/Attempt 1.srcs/sources_1/new/5Cycle.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cycle_5
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Attempt 1/Attempt 1.srcs/sources_1/new/Choose_4_bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Choose_4_bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Attempt 1/Attempt 1.srcs/sources_1/new/Choose_Dot.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Choose_Dot
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Attempt 1/Attempt 1.srcs/sources_1/new/Digit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Digit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Attempt 1/Attempt 1.srcs/sources_1/new/DigitSignal.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigitSignal
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Attempt 1/Attempt 1.srcs/sources_1/new/Merge_8_bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Merge_8_bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Attempt 1/Attempt 1.srcs/sources_1/imports/FPGA_Stuff/clockReset.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clockReset
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Attempt 1/Attempt 1.srcs/sources_1/imports/FPGA_Stuff/hex2seg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hex2seg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gaoke/Documents/GitHub/FPGA_Stuff/Attempt 1/Attempt 1.srcs/sources_1/imports/FPGA_Stuff/displayTest.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module displayTest

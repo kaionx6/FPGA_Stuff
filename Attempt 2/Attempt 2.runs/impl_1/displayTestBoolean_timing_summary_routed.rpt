@@ -1,0 +1,2605 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu Oct 15 01:11:21 2026
+| Host         : KelvinPC running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file displayTestBoolean_timing_summary_routed.rpt -pb displayTestBoolean_timing_summary_routed.pb -rpx displayTestBoolean_timing_summary_routed.rpx -warn_on_violation
+| Design       : displayTestBoolean
+| Device       : 7s50-csga324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule     Severity  Description                   Violations  
+-------  --------  ----------------------------  ----------  
+LUTAR-1  Warning   LUT drives async reset alert  1           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (1)
+6. checking no_output_delay (21)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (1)
+------------------------------
+ There is 1 input port with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (21)
+--------------------------------
+ There are 21 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+    196.053        0.000                      0                   86        0.191        0.000                      0                   86        3.000        0.000                       0                    49  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock        Waveform(ns)         Period(ns)      Frequency(MHz)
+-----        ------------         ----------      --------------
+sys_clk_pin  {0.000 5.000}        10.000          100.000         
+  clk5_0     {0.000 100.000}      200.000         5.000           
+  clkfbout   {0.000 25.000}       50.000          20.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk_pin                                                                                                                                                     3.000        0.000                       0                     1  
+  clk5_0          196.053        0.000                      0                   86        0.191        0.000                      0                   86       13.360        0.000                       0                    46  
+  clkfbout                                                                                                                                                     48.751        0.000                       0                     2  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+(none)        clk5_0                      
+(none)        clkfbout                    
+(none)                      clk5_0        
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        3.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk100 }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         10.000      8.751      MMCME2_ADV_X0Y1  test_hardware/clkGen/MMCME2_BASE_inst/CLKIN1
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       10.000      90.000     MMCME2_ADV_X0Y1  test_hardware/clkGen/MMCME2_BASE_inst/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X0Y1  test_hardware/clkGen/MMCME2_BASE_inst/CLKIN1
+Low Pulse Width   Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X0Y1  test_hardware/clkGen/MMCME2_BASE_inst/CLKIN1
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X0Y1  test_hardware/clkGen/MMCME2_BASE_inst/CLKIN1
+High Pulse Width  Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X0Y1  test_hardware/clkGen/MMCME2_BASE_inst/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk5_0
+  To Clock:  clk5_0
+
+Setup :            0  Failing Endpoints,  Worst Slack      196.053ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.191ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack       13.360ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             196.053ns  (required time - arrival time)
+  Source:                 test_hardware/clkGen/resetFFn_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            test_hardware/display/counter/C_reg[0]/R
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             clk5_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            200.000ns  (clk5_0 rise@200.000ns - clk5_0 rise@0.000ns)
+  Data Path Delay:        3.121ns  (logic 0.642ns (20.569%)  route 2.479ns (79.431%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.107ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.746ns = ( 205.746 - 200.000 ) 
+    Source Clock Delay      (SCD):    6.163ns
+    Clock Pessimism Removal (CPR):    0.310ns
+  Clock Uncertainty:      0.289ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458     1.458 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233     2.692    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.780 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.666     4.446    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     4.542 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.621     6.163    test_hardware/clkGen/clk5
+    SLICE_X60Y60         FDCE                                         r  test_hardware/clkGen/resetFFn_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X60Y60         FDCE (Prop_fdce_C_Q)         0.518     6.681 f  test_hardware/clkGen/resetFFn_reg/Q
+                         net (fo=1, routed)           0.521     7.202    test_hardware/clkGen/resetFFn
+    SLICE_X60Y60         LUT1 (Prop_lut1_I0_O)        0.124     7.326 r  test_hardware/clkGen/count[2]_i_1/O
+                         net (fo=43, routed)          1.958     9.284    test_hardware/display/counter/clear
+    SLICE_X57Y64         FDRE                                         r  test_hardware/display/counter/C_reg[0]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)   200.000   200.000 r  
+    F14                                               0.000   200.000 r  clk100 (IN)
+                         net (fo=0)                   0.000   200.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.388   201.388 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.162   202.550    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083   202.633 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.587   204.220    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   204.311 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.435   205.746    test_hardware/display/counter/clk5
+    SLICE_X57Y64         FDRE                                         r  test_hardware/display/counter/C_reg[0]/C
+                         clock pessimism              0.310   206.056    
+                         clock uncertainty           -0.289   205.767    
+    SLICE_X57Y64         FDRE (Setup_fdre_C_R)       -0.429   205.338    test_hardware/display/counter/C_reg[0]
+  -------------------------------------------------------------------
+                         required time                        205.338    
+                         arrival time                          -9.284    
+  -------------------------------------------------------------------
+                         slack                                196.053    
+
+Slack (MET) :             196.053ns  (required time - arrival time)
+  Source:                 test_hardware/clkGen/resetFFn_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            test_hardware/display/counter/C_reg[1]/R
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             clk5_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            200.000ns  (clk5_0 rise@200.000ns - clk5_0 rise@0.000ns)
+  Data Path Delay:        3.121ns  (logic 0.642ns (20.569%)  route 2.479ns (79.431%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.107ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.746ns = ( 205.746 - 200.000 ) 
+    Source Clock Delay      (SCD):    6.163ns
+    Clock Pessimism Removal (CPR):    0.310ns
+  Clock Uncertainty:      0.289ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458     1.458 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233     2.692    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.780 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.666     4.446    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     4.542 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.621     6.163    test_hardware/clkGen/clk5
+    SLICE_X60Y60         FDCE                                         r  test_hardware/clkGen/resetFFn_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X60Y60         FDCE (Prop_fdce_C_Q)         0.518     6.681 f  test_hardware/clkGen/resetFFn_reg/Q
+                         net (fo=1, routed)           0.521     7.202    test_hardware/clkGen/resetFFn
+    SLICE_X60Y60         LUT1 (Prop_lut1_I0_O)        0.124     7.326 r  test_hardware/clkGen/count[2]_i_1/O
+                         net (fo=43, routed)          1.958     9.284    test_hardware/display/counter/clear
+    SLICE_X57Y64         FDRE                                         r  test_hardware/display/counter/C_reg[1]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)   200.000   200.000 r  
+    F14                                               0.000   200.000 r  clk100 (IN)
+                         net (fo=0)                   0.000   200.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.388   201.388 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.162   202.550    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083   202.633 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.587   204.220    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   204.311 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.435   205.746    test_hardware/display/counter/clk5
+    SLICE_X57Y64         FDRE                                         r  test_hardware/display/counter/C_reg[1]/C
+                         clock pessimism              0.310   206.056    
+                         clock uncertainty           -0.289   205.767    
+    SLICE_X57Y64         FDRE (Setup_fdre_C_R)       -0.429   205.338    test_hardware/display/counter/C_reg[1]
+  -------------------------------------------------------------------
+                         required time                        205.338    
+                         arrival time                          -9.284    
+  -------------------------------------------------------------------
+                         slack                                196.053    
+
+Slack (MET) :             196.053ns  (required time - arrival time)
+  Source:                 test_hardware/clkGen/resetFFn_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            test_hardware/display/counter/C_reg[2]/R
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             clk5_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            200.000ns  (clk5_0 rise@200.000ns - clk5_0 rise@0.000ns)
+  Data Path Delay:        3.121ns  (logic 0.642ns (20.569%)  route 2.479ns (79.431%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.107ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.746ns = ( 205.746 - 200.000 ) 
+    Source Clock Delay      (SCD):    6.163ns
+    Clock Pessimism Removal (CPR):    0.310ns
+  Clock Uncertainty:      0.289ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458     1.458 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233     2.692    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.780 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.666     4.446    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     4.542 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.621     6.163    test_hardware/clkGen/clk5
+    SLICE_X60Y60         FDCE                                         r  test_hardware/clkGen/resetFFn_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X60Y60         FDCE (Prop_fdce_C_Q)         0.518     6.681 f  test_hardware/clkGen/resetFFn_reg/Q
+                         net (fo=1, routed)           0.521     7.202    test_hardware/clkGen/resetFFn
+    SLICE_X60Y60         LUT1 (Prop_lut1_I0_O)        0.124     7.326 r  test_hardware/clkGen/count[2]_i_1/O
+                         net (fo=43, routed)          1.958     9.284    test_hardware/display/counter/clear
+    SLICE_X57Y64         FDRE                                         r  test_hardware/display/counter/C_reg[2]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)   200.000   200.000 r  
+    F14                                               0.000   200.000 r  clk100 (IN)
+                         net (fo=0)                   0.000   200.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.388   201.388 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.162   202.550    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083   202.633 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.587   204.220    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   204.311 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.435   205.746    test_hardware/display/counter/clk5
+    SLICE_X57Y64         FDRE                                         r  test_hardware/display/counter/C_reg[2]/C
+                         clock pessimism              0.310   206.056    
+                         clock uncertainty           -0.289   205.767    
+    SLICE_X57Y64         FDRE (Setup_fdre_C_R)       -0.429   205.338    test_hardware/display/counter/C_reg[2]
+  -------------------------------------------------------------------
+                         required time                        205.338    
+                         arrival time                          -9.284    
+  -------------------------------------------------------------------
+                         slack                                196.053    
+
+Slack (MET) :             196.192ns  (required time - arrival time)
+  Source:                 test_hardware/clkGen/resetFFn_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            test_hardware/display/counter/C_reg[3]/R
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             clk5_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            200.000ns  (clk5_0 rise@200.000ns - clk5_0 rise@0.000ns)
+  Data Path Delay:        3.061ns  (logic 0.642ns (20.971%)  route 2.419ns (79.029%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.811ns = ( 205.811 - 200.000 ) 
+    Source Clock Delay      (SCD):    6.163ns
+    Clock Pessimism Removal (CPR):    0.324ns
+  Clock Uncertainty:      0.289ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458     1.458 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233     2.692    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.780 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.666     4.446    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     4.542 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.621     6.163    test_hardware/clkGen/clk5
+    SLICE_X60Y60         FDCE                                         r  test_hardware/clkGen/resetFFn_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X60Y60         FDCE (Prop_fdce_C_Q)         0.518     6.681 f  test_hardware/clkGen/resetFFn_reg/Q
+                         net (fo=1, routed)           0.521     7.202    test_hardware/clkGen/resetFFn
+    SLICE_X60Y60         LUT1 (Prop_lut1_I0_O)        0.124     7.326 r  test_hardware/clkGen/count[2]_i_1/O
+                         net (fo=43, routed)          1.898     9.224    test_hardware/display/counter/clear
+    SLICE_X58Y64         FDRE                                         r  test_hardware/display/counter/C_reg[3]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)   200.000   200.000 r  
+    F14                                               0.000   200.000 r  clk100 (IN)
+                         net (fo=0)                   0.000   200.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.388   201.388 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.162   202.550    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083   202.633 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.587   204.220    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   204.311 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.500   205.811    test_hardware/display/counter/clk5
+    SLICE_X58Y64         FDRE                                         r  test_hardware/display/counter/C_reg[3]/C
+                         clock pessimism              0.324   206.135    
+                         clock uncertainty           -0.289   205.846    
+    SLICE_X58Y64         FDRE (Setup_fdre_C_R)       -0.429   205.417    test_hardware/display/counter/C_reg[3]
+  -------------------------------------------------------------------
+                         required time                        205.417    
+                         arrival time                          -9.224    
+  -------------------------------------------------------------------
+                         slack                                196.192    
+
+Slack (MET) :             196.192ns  (required time - arrival time)
+  Source:                 test_hardware/clkGen/resetFFn_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            test_hardware/display/counter/C_reg[4]/R
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             clk5_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            200.000ns  (clk5_0 rise@200.000ns - clk5_0 rise@0.000ns)
+  Data Path Delay:        3.061ns  (logic 0.642ns (20.971%)  route 2.419ns (79.029%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.811ns = ( 205.811 - 200.000 ) 
+    Source Clock Delay      (SCD):    6.163ns
+    Clock Pessimism Removal (CPR):    0.324ns
+  Clock Uncertainty:      0.289ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458     1.458 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233     2.692    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.780 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.666     4.446    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     4.542 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.621     6.163    test_hardware/clkGen/clk5
+    SLICE_X60Y60         FDCE                                         r  test_hardware/clkGen/resetFFn_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X60Y60         FDCE (Prop_fdce_C_Q)         0.518     6.681 f  test_hardware/clkGen/resetFFn_reg/Q
+                         net (fo=1, routed)           0.521     7.202    test_hardware/clkGen/resetFFn
+    SLICE_X60Y60         LUT1 (Prop_lut1_I0_O)        0.124     7.326 r  test_hardware/clkGen/count[2]_i_1/O
+                         net (fo=43, routed)          1.898     9.224    test_hardware/display/counter/clear
+    SLICE_X58Y64         FDRE                                         r  test_hardware/display/counter/C_reg[4]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)   200.000   200.000 r  
+    F14                                               0.000   200.000 r  clk100 (IN)
+                         net (fo=0)                   0.000   200.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.388   201.388 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.162   202.550    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083   202.633 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.587   204.220    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   204.311 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.500   205.811    test_hardware/display/counter/clk5
+    SLICE_X58Y64         FDRE                                         r  test_hardware/display/counter/C_reg[4]/C
+                         clock pessimism              0.324   206.135    
+                         clock uncertainty           -0.289   205.846    
+    SLICE_X58Y64         FDRE (Setup_fdre_C_R)       -0.429   205.417    test_hardware/display/counter/C_reg[4]
+  -------------------------------------------------------------------
+                         required time                        205.417    
+                         arrival time                          -9.224    
+  -------------------------------------------------------------------
+                         slack                                196.192    
+
+Slack (MET) :             196.192ns  (required time - arrival time)
+  Source:                 test_hardware/clkGen/resetFFn_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            test_hardware/display/counter/C_reg[5]/R
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             clk5_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            200.000ns  (clk5_0 rise@200.000ns - clk5_0 rise@0.000ns)
+  Data Path Delay:        3.061ns  (logic 0.642ns (20.971%)  route 2.419ns (79.029%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.811ns = ( 205.811 - 200.000 ) 
+    Source Clock Delay      (SCD):    6.163ns
+    Clock Pessimism Removal (CPR):    0.324ns
+  Clock Uncertainty:      0.289ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458     1.458 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233     2.692    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.780 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.666     4.446    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     4.542 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.621     6.163    test_hardware/clkGen/clk5
+    SLICE_X60Y60         FDCE                                         r  test_hardware/clkGen/resetFFn_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X60Y60         FDCE (Prop_fdce_C_Q)         0.518     6.681 f  test_hardware/clkGen/resetFFn_reg/Q
+                         net (fo=1, routed)           0.521     7.202    test_hardware/clkGen/resetFFn
+    SLICE_X60Y60         LUT1 (Prop_lut1_I0_O)        0.124     7.326 r  test_hardware/clkGen/count[2]_i_1/O
+                         net (fo=43, routed)          1.898     9.224    test_hardware/display/counter/clear
+    SLICE_X58Y64         FDRE                                         r  test_hardware/display/counter/C_reg[5]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)   200.000   200.000 r  
+    F14                                               0.000   200.000 r  clk100 (IN)
+                         net (fo=0)                   0.000   200.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.388   201.388 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.162   202.550    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083   202.633 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.587   204.220    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   204.311 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.500   205.811    test_hardware/display/counter/clk5
+    SLICE_X58Y64         FDRE                                         r  test_hardware/display/counter/C_reg[5]/C
+                         clock pessimism              0.324   206.135    
+                         clock uncertainty           -0.289   205.846    
+    SLICE_X58Y64         FDRE (Setup_fdre_C_R)       -0.429   205.417    test_hardware/display/counter/C_reg[5]
+  -------------------------------------------------------------------
+                         required time                        205.417    
+                         arrival time                          -9.224    
+  -------------------------------------------------------------------
+                         slack                                196.192    
+
+Slack (MET) :             196.197ns  (required time - arrival time)
+  Source:                 test_hardware/clkGen/resetFFn_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            test_hardware/display/counter/C_reg[6]/R
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             clk5_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            200.000ns  (clk5_0 rise@200.000ns - clk5_0 rise@0.000ns)
+  Data Path Delay:        3.057ns  (logic 0.642ns (21.001%)  route 2.415ns (78.999%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.811ns = ( 205.811 - 200.000 ) 
+    Source Clock Delay      (SCD):    6.163ns
+    Clock Pessimism Removal (CPR):    0.324ns
+  Clock Uncertainty:      0.289ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458     1.458 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233     2.692    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.780 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.666     4.446    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     4.542 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.621     6.163    test_hardware/clkGen/clk5
+    SLICE_X60Y60         FDCE                                         r  test_hardware/clkGen/resetFFn_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X60Y60         FDCE (Prop_fdce_C_Q)         0.518     6.681 f  test_hardware/clkGen/resetFFn_reg/Q
+                         net (fo=1, routed)           0.521     7.202    test_hardware/clkGen/resetFFn
+    SLICE_X60Y60         LUT1 (Prop_lut1_I0_O)        0.124     7.326 r  test_hardware/clkGen/count[2]_i_1/O
+                         net (fo=43, routed)          1.894     9.220    test_hardware/display/counter/clear
+    SLICE_X59Y64         FDRE                                         r  test_hardware/display/counter/C_reg[6]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)   200.000   200.000 r  
+    F14                                               0.000   200.000 r  clk100 (IN)
+                         net (fo=0)                   0.000   200.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.388   201.388 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.162   202.550    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083   202.633 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.587   204.220    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   204.311 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.500   205.811    test_hardware/display/counter/clk5
+    SLICE_X59Y64         FDRE                                         r  test_hardware/display/counter/C_reg[6]/C
+                         clock pessimism              0.324   206.135    
+                         clock uncertainty           -0.289   205.846    
+    SLICE_X59Y64         FDRE (Setup_fdre_C_R)       -0.429   205.417    test_hardware/display/counter/C_reg[6]
+  -------------------------------------------------------------------
+                         required time                        205.417    
+                         arrival time                          -9.220    
+  -------------------------------------------------------------------
+                         slack                                196.197    
+
+Slack (MET) :             196.524ns  (required time - arrival time)
+  Source:                 test_hardware/clkGen/resetFFn_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            test_hardware/testCount_reg[28]/R
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             clk5_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            200.000ns  (clk5_0 rise@200.000ns - clk5_0 rise@0.000ns)
+  Data Path Delay:        2.714ns  (logic 0.642ns (23.653%)  route 2.072ns (76.347%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.043ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.810ns = ( 205.810 - 200.000 ) 
+    Source Clock Delay      (SCD):    6.163ns
+    Clock Pessimism Removal (CPR):    0.310ns
+  Clock Uncertainty:      0.289ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458     1.458 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233     2.692    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.780 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.666     4.446    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     4.542 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.621     6.163    test_hardware/clkGen/clk5
+    SLICE_X60Y60         FDCE                                         r  test_hardware/clkGen/resetFFn_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X60Y60         FDCE (Prop_fdce_C_Q)         0.518     6.681 f  test_hardware/clkGen/resetFFn_reg/Q
+                         net (fo=1, routed)           0.521     7.202    test_hardware/clkGen/resetFFn
+    SLICE_X60Y60         LUT1 (Prop_lut1_I0_O)        0.124     7.326 r  test_hardware/clkGen/count[2]_i_1/O
+                         net (fo=43, routed)          1.551     8.877    test_hardware/clear
+    SLICE_X63Y66         FDRE                                         r  test_hardware/testCount_reg[28]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)   200.000   200.000 r  
+    F14                                               0.000   200.000 r  clk100 (IN)
+                         net (fo=0)                   0.000   200.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.388   201.388 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.162   202.550    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083   202.633 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.587   204.220    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   204.311 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.499   205.810    test_hardware/clk5
+    SLICE_X63Y66         FDRE                                         r  test_hardware/testCount_reg[28]/C
+                         clock pessimism              0.310   206.120    
+                         clock uncertainty           -0.289   205.831    
+    SLICE_X63Y66         FDRE (Setup_fdre_C_R)       -0.429   205.402    test_hardware/testCount_reg[28]
+  -------------------------------------------------------------------
+                         required time                        205.402    
+                         arrival time                          -8.877    
+  -------------------------------------------------------------------
+                         slack                                196.524    
+
+Slack (MET) :             196.524ns  (required time - arrival time)
+  Source:                 test_hardware/clkGen/resetFFn_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            test_hardware/testCount_reg[29]/R
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             clk5_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            200.000ns  (clk5_0 rise@200.000ns - clk5_0 rise@0.000ns)
+  Data Path Delay:        2.714ns  (logic 0.642ns (23.653%)  route 2.072ns (76.347%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.043ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.810ns = ( 205.810 - 200.000 ) 
+    Source Clock Delay      (SCD):    6.163ns
+    Clock Pessimism Removal (CPR):    0.310ns
+  Clock Uncertainty:      0.289ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458     1.458 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233     2.692    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.780 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.666     4.446    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     4.542 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.621     6.163    test_hardware/clkGen/clk5
+    SLICE_X60Y60         FDCE                                         r  test_hardware/clkGen/resetFFn_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X60Y60         FDCE (Prop_fdce_C_Q)         0.518     6.681 f  test_hardware/clkGen/resetFFn_reg/Q
+                         net (fo=1, routed)           0.521     7.202    test_hardware/clkGen/resetFFn
+    SLICE_X60Y60         LUT1 (Prop_lut1_I0_O)        0.124     7.326 r  test_hardware/clkGen/count[2]_i_1/O
+                         net (fo=43, routed)          1.551     8.877    test_hardware/clear
+    SLICE_X63Y66         FDRE                                         r  test_hardware/testCount_reg[29]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)   200.000   200.000 r  
+    F14                                               0.000   200.000 r  clk100 (IN)
+                         net (fo=0)                   0.000   200.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.388   201.388 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.162   202.550    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083   202.633 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.587   204.220    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   204.311 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.499   205.810    test_hardware/clk5
+    SLICE_X63Y66         FDRE                                         r  test_hardware/testCount_reg[29]/C
+                         clock pessimism              0.310   206.120    
+                         clock uncertainty           -0.289   205.831    
+    SLICE_X63Y66         FDRE (Setup_fdre_C_R)       -0.429   205.402    test_hardware/testCount_reg[29]
+  -------------------------------------------------------------------
+                         required time                        205.402    
+                         arrival time                          -8.877    
+  -------------------------------------------------------------------
+                         slack                                196.524    
+
+Slack (MET) :             196.583ns  (required time - arrival time)
+  Source:                 test_hardware/clkGen/resetFFn_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            test_hardware/display/counter/C_reg[7]/R
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             clk5_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            200.000ns  (clk5_0 rise@200.000ns - clk5_0 rise@0.000ns)
+  Data Path Delay:        2.576ns  (logic 0.642ns (24.925%)  route 1.934ns (75.075%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.811ns = ( 205.811 - 200.000 ) 
+    Source Clock Delay      (SCD):    6.163ns
+    Clock Pessimism Removal (CPR):    0.324ns
+  Clock Uncertainty:      0.289ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458     1.458 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233     2.692    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.780 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.666     4.446    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     4.542 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.621     6.163    test_hardware/clkGen/clk5
+    SLICE_X60Y60         FDCE                                         r  test_hardware/clkGen/resetFFn_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X60Y60         FDCE (Prop_fdce_C_Q)         0.518     6.681 f  test_hardware/clkGen/resetFFn_reg/Q
+                         net (fo=1, routed)           0.521     7.202    test_hardware/clkGen/resetFFn
+    SLICE_X60Y60         LUT1 (Prop_lut1_I0_O)        0.124     7.326 r  test_hardware/clkGen/count[2]_i_1/O
+                         net (fo=43, routed)          1.413     8.739    test_hardware/display/counter/clear
+    SLICE_X60Y64         FDRE                                         r  test_hardware/display/counter/C_reg[7]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)   200.000   200.000 r  
+    F14                                               0.000   200.000 r  clk100 (IN)
+                         net (fo=0)                   0.000   200.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.388   201.388 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.162   202.550    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083   202.633 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.587   204.220    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   204.311 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.500   205.811    test_hardware/display/counter/clk5
+    SLICE_X60Y64         FDRE                                         r  test_hardware/display/counter/C_reg[7]/C
+                         clock pessimism              0.324   206.135    
+                         clock uncertainty           -0.289   205.846    
+    SLICE_X60Y64         FDRE (Setup_fdre_C_R)       -0.524   205.322    test_hardware/display/counter/C_reg[7]
+  -------------------------------------------------------------------
+                         required time                        205.322    
+                         arrival time                          -8.739    
+  -------------------------------------------------------------------
+                         slack                                196.583    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.191ns  (arrival time - required time)
+  Source:                 test_hardware/display/counter/C_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            test_hardware/display/counter/C_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             clk5_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk5_0 rise@0.000ns - clk5_0 rise@0.000ns)
+  Data Path Delay:        0.295ns  (logic 0.186ns (63.068%)  route 0.109ns (36.932%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.364ns
+    Source Clock Delay      (SCD):    1.817ns
+    Clock Pessimism Removal (CPR):    0.534ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.489     1.206    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.232 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.586     1.817    test_hardware/display/counter/clk5
+    SLICE_X58Y64         FDRE                                         r  test_hardware/display/counter/C_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y64         FDRE (Prop_fdre_C_Q)         0.141     1.958 r  test_hardware/display/counter/C_reg[3]/Q
+                         net (fo=6, routed)           0.109     2.067    test_hardware/display/counter/C_reg[3]
+    SLICE_X59Y64         LUT6 (Prop_lut6_I3_O)        0.045     2.112 r  test_hardware/display/counter/C[6]_i_1/O
+                         net (fo=1, routed)           0.000     2.112    test_hardware/display/counter/p_0_in[6]
+    SLICE_X59Y64         FDRE                                         r  test_hardware/display/counter/C_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.414     0.414 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.480     0.894    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.947 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.534     1.481    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.510 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.855     2.364    test_hardware/display/counter/clk5
+    SLICE_X59Y64         FDRE                                         r  test_hardware/display/counter/C_reg[6]/C
+                         clock pessimism             -0.534     1.830    
+    SLICE_X59Y64         FDRE (Hold_fdre_C_D)         0.091     1.921    test_hardware/display/counter/C_reg[6]
+  -------------------------------------------------------------------
+                         required time                         -1.921    
+                         arrival time                           2.112    
+  -------------------------------------------------------------------
+                         slack                                  0.191    
+
+Slack (MET) :             0.252ns  (arrival time - required time)
+  Source:                 test_hardware/testCount_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            test_hardware/testCount_reg[11]/D
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             clk5_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk5_0 rise@0.000ns - clk5_0 rise@0.000ns)
+  Data Path Delay:        0.357ns  (logic 0.249ns (69.714%)  route 0.108ns (30.286%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.369ns
+    Source Clock Delay      (SCD):    1.820ns
+    Clock Pessimism Removal (CPR):    0.549ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.489     1.206    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.232 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.589     1.820    test_hardware/clk5
+    SLICE_X63Y61         FDRE                                         r  test_hardware/testCount_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y61         FDRE (Prop_fdre_C_Q)         0.141     1.961 r  test_hardware/testCount_reg[11]/Q
+                         net (fo=1, routed)           0.108     2.069    test_hardware/testCount_reg_n_0_[11]
+    SLICE_X63Y61         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     2.177 r  test_hardware/testCount_reg[8]_i_1/O[3]
+                         net (fo=1, routed)           0.000     2.177    test_hardware/testCount_reg[8]_i_1_n_4
+    SLICE_X63Y61         FDRE                                         r  test_hardware/testCount_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.414     0.414 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.480     0.894    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.947 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.534     1.481    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.510 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.860     2.369    test_hardware/clk5
+    SLICE_X63Y61         FDRE                                         r  test_hardware/testCount_reg[11]/C
+                         clock pessimism             -0.549     1.820    
+    SLICE_X63Y61         FDRE (Hold_fdre_C_D)         0.105     1.925    test_hardware/testCount_reg[11]
+  -------------------------------------------------------------------
+                         required time                         -1.925    
+                         arrival time                           2.177    
+  -------------------------------------------------------------------
+                         slack                                  0.252    
+
+Slack (MET) :             0.252ns  (arrival time - required time)
+  Source:                 test_hardware/testCount_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            test_hardware/testCount_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             clk5_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk5_0 rise@0.000ns - clk5_0 rise@0.000ns)
+  Data Path Delay:        0.357ns  (logic 0.249ns (69.714%)  route 0.108ns (30.286%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.369ns
+    Source Clock Delay      (SCD):    1.820ns
+    Clock Pessimism Removal (CPR):    0.549ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.489     1.206    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.232 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.589     1.820    test_hardware/clk5
+    SLICE_X63Y60         FDRE                                         r  test_hardware/testCount_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y60         FDRE (Prop_fdre_C_Q)         0.141     1.961 r  test_hardware/testCount_reg[7]/Q
+                         net (fo=1, routed)           0.108     2.069    test_hardware/testCount_reg_n_0_[7]
+    SLICE_X63Y60         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     2.177 r  test_hardware/testCount_reg[4]_i_1/O[3]
+                         net (fo=1, routed)           0.000     2.177    test_hardware/testCount_reg[4]_i_1_n_4
+    SLICE_X63Y60         FDRE                                         r  test_hardware/testCount_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.414     0.414 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.480     0.894    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.947 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.534     1.481    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.510 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.860     2.369    test_hardware/clk5
+    SLICE_X63Y60         FDRE                                         r  test_hardware/testCount_reg[7]/C
+                         clock pessimism             -0.549     1.820    
+    SLICE_X63Y60         FDRE (Hold_fdre_C_D)         0.105     1.925    test_hardware/testCount_reg[7]
+  -------------------------------------------------------------------
+                         required time                         -1.925    
+                         arrival time                           2.177    
+  -------------------------------------------------------------------
+                         slack                                  0.252    
+
+Slack (MET) :             0.252ns  (arrival time - required time)
+  Source:                 test_hardware/testCount_reg[19]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            test_hardware/testCount_reg[19]/D
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             clk5_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk5_0 rise@0.000ns - clk5_0 rise@0.000ns)
+  Data Path Delay:        0.357ns  (logic 0.249ns (69.714%)  route 0.108ns (30.286%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.366ns
+    Source Clock Delay      (SCD):    1.818ns
+    Clock Pessimism Removal (CPR):    0.548ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.489     1.206    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.232 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.587     1.818    test_hardware/clk5
+    SLICE_X63Y63         FDRE                                         r  test_hardware/testCount_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y63         FDRE (Prop_fdre_C_Q)         0.141     1.959 r  test_hardware/testCount_reg[19]/Q
+                         net (fo=1, routed)           0.108     2.067    test_hardware/testCount_reg_n_0_[19]
+    SLICE_X63Y63         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     2.175 r  test_hardware/testCount_reg[16]_i_1/O[3]
+                         net (fo=1, routed)           0.000     2.175    test_hardware/testCount_reg[16]_i_1_n_4
+    SLICE_X63Y63         FDRE                                         r  test_hardware/testCount_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.414     0.414 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.480     0.894    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.947 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.534     1.481    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.510 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.856     2.366    test_hardware/clk5
+    SLICE_X63Y63         FDRE                                         r  test_hardware/testCount_reg[19]/C
+                         clock pessimism             -0.548     1.818    
+    SLICE_X63Y63         FDRE (Hold_fdre_C_D)         0.105     1.923    test_hardware/testCount_reg[19]
+  -------------------------------------------------------------------
+                         required time                         -1.923    
+                         arrival time                           2.175    
+  -------------------------------------------------------------------
+                         slack                                  0.252    
+
+Slack (MET) :             0.252ns  (arrival time - required time)
+  Source:                 test_hardware/testCount_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            test_hardware/testCount_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             clk5_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk5_0 rise@0.000ns - clk5_0 rise@0.000ns)
+  Data Path Delay:        0.357ns  (logic 0.249ns (69.714%)  route 0.108ns (30.286%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.370ns
+    Source Clock Delay      (SCD):    1.821ns
+    Clock Pessimism Removal (CPR):    0.549ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.489     1.206    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.232 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.590     1.821    test_hardware/clk5
+    SLICE_X63Y59         FDRE                                         r  test_hardware/testCount_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y59         FDRE (Prop_fdre_C_Q)         0.141     1.962 r  test_hardware/testCount_reg[3]/Q
+                         net (fo=1, routed)           0.108     2.070    test_hardware/testCount_reg_n_0_[3]
+    SLICE_X63Y59         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     2.178 r  test_hardware/testCount_reg[0]_i_1/O[3]
+                         net (fo=1, routed)           0.000     2.178    test_hardware/testCount_reg[0]_i_1_n_4
+    SLICE_X63Y59         FDRE                                         r  test_hardware/testCount_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.414     0.414 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.480     0.894    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.947 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.534     1.481    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.510 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.860     2.370    test_hardware/clk5
+    SLICE_X63Y59         FDRE                                         r  test_hardware/testCount_reg[3]/C
+                         clock pessimism             -0.549     1.821    
+    SLICE_X63Y59         FDRE (Hold_fdre_C_D)         0.105     1.926    test_hardware/testCount_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.926    
+                         arrival time                           2.178    
+  -------------------------------------------------------------------
+                         slack                                  0.252    
+
+Slack (MET) :             0.252ns  (arrival time - required time)
+  Source:                 test_hardware/testCount_reg[15]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            test_hardware/testCount_reg[15]/D
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             clk5_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk5_0 rise@0.000ns - clk5_0 rise@0.000ns)
+  Data Path Delay:        0.357ns  (logic 0.249ns (69.714%)  route 0.108ns (30.286%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.367ns
+    Source Clock Delay      (SCD):    1.819ns
+    Clock Pessimism Removal (CPR):    0.548ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.489     1.206    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.232 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.588     1.819    test_hardware/clk5
+    SLICE_X63Y62         FDRE                                         r  test_hardware/testCount_reg[15]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y62         FDRE (Prop_fdre_C_Q)         0.141     1.960 r  test_hardware/testCount_reg[15]/Q
+                         net (fo=1, routed)           0.108     2.068    test_hardware/testCount_reg_n_0_[15]
+    SLICE_X63Y62         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     2.176 r  test_hardware/testCount_reg[12]_i_1/O[3]
+                         net (fo=1, routed)           0.000     2.176    test_hardware/testCount_reg[12]_i_1_n_4
+    SLICE_X63Y62         FDRE                                         r  test_hardware/testCount_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.414     0.414 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.480     0.894    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.947 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.534     1.481    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.510 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.858     2.367    test_hardware/clk5
+    SLICE_X63Y62         FDRE                                         r  test_hardware/testCount_reg[15]/C
+                         clock pessimism             -0.548     1.819    
+    SLICE_X63Y62         FDRE (Hold_fdre_C_D)         0.105     1.924    test_hardware/testCount_reg[15]
+  -------------------------------------------------------------------
+                         required time                         -1.924    
+                         arrival time                           2.176    
+  -------------------------------------------------------------------
+                         slack                                  0.252    
+
+Slack (MET) :             0.256ns  (arrival time - required time)
+  Source:                 test_hardware/testCount_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            test_hardware/testCount_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             clk5_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk5_0 rise@0.000ns - clk5_0 rise@0.000ns)
+  Data Path Delay:        0.361ns  (logic 0.256ns (70.880%)  route 0.105ns (29.120%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.369ns
+    Source Clock Delay      (SCD):    1.820ns
+    Clock Pessimism Removal (CPR):    0.549ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.489     1.206    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.232 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.589     1.820    test_hardware/clk5
+    SLICE_X63Y60         FDRE                                         r  test_hardware/testCount_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y60         FDRE (Prop_fdre_C_Q)         0.141     1.961 r  test_hardware/testCount_reg[4]/Q
+                         net (fo=1, routed)           0.105     2.066    test_hardware/testCount_reg_n_0_[4]
+    SLICE_X63Y60         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     2.181 r  test_hardware/testCount_reg[4]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.181    test_hardware/testCount_reg[4]_i_1_n_7
+    SLICE_X63Y60         FDRE                                         r  test_hardware/testCount_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.414     0.414 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.480     0.894    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.947 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.534     1.481    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.510 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.860     2.369    test_hardware/clk5
+    SLICE_X63Y60         FDRE                                         r  test_hardware/testCount_reg[4]/C
+                         clock pessimism             -0.549     1.820    
+    SLICE_X63Y60         FDRE (Hold_fdre_C_D)         0.105     1.925    test_hardware/testCount_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.925    
+                         arrival time                           2.181    
+  -------------------------------------------------------------------
+                         slack                                  0.256    
+
+Slack (MET) :             0.256ns  (arrival time - required time)
+  Source:                 test_hardware/testCount_reg[8]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            test_hardware/testCount_reg[8]/D
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             clk5_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk5_0 rise@0.000ns - clk5_0 rise@0.000ns)
+  Data Path Delay:        0.361ns  (logic 0.256ns (70.880%)  route 0.105ns (29.120%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.369ns
+    Source Clock Delay      (SCD):    1.820ns
+    Clock Pessimism Removal (CPR):    0.549ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.489     1.206    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.232 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.589     1.820    test_hardware/clk5
+    SLICE_X63Y61         FDRE                                         r  test_hardware/testCount_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y61         FDRE (Prop_fdre_C_Q)         0.141     1.961 r  test_hardware/testCount_reg[8]/Q
+                         net (fo=1, routed)           0.105     2.066    test_hardware/testCount_reg_n_0_[8]
+    SLICE_X63Y61         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     2.181 r  test_hardware/testCount_reg[8]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.181    test_hardware/testCount_reg[8]_i_1_n_7
+    SLICE_X63Y61         FDRE                                         r  test_hardware/testCount_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.414     0.414 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.480     0.894    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.947 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.534     1.481    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.510 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.860     2.369    test_hardware/clk5
+    SLICE_X63Y61         FDRE                                         r  test_hardware/testCount_reg[8]/C
+                         clock pessimism             -0.549     1.820    
+    SLICE_X63Y61         FDRE (Hold_fdre_C_D)         0.105     1.925    test_hardware/testCount_reg[8]
+  -------------------------------------------------------------------
+                         required time                         -1.925    
+                         arrival time                           2.181    
+  -------------------------------------------------------------------
+                         slack                                  0.256    
+
+Slack (MET) :             0.256ns  (arrival time - required time)
+  Source:                 test_hardware/testCount_reg[16]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            test_hardware/testCount_reg[16]/D
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             clk5_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk5_0 rise@0.000ns - clk5_0 rise@0.000ns)
+  Data Path Delay:        0.361ns  (logic 0.256ns (70.880%)  route 0.105ns (29.120%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.366ns
+    Source Clock Delay      (SCD):    1.818ns
+    Clock Pessimism Removal (CPR):    0.548ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.489     1.206    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.232 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.587     1.818    test_hardware/clk5
+    SLICE_X63Y63         FDRE                                         r  test_hardware/testCount_reg[16]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y63         FDRE (Prop_fdre_C_Q)         0.141     1.959 r  test_hardware/testCount_reg[16]/Q
+                         net (fo=1, routed)           0.105     2.064    test_hardware/testCount_reg_n_0_[16]
+    SLICE_X63Y63         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     2.179 r  test_hardware/testCount_reg[16]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.179    test_hardware/testCount_reg[16]_i_1_n_7
+    SLICE_X63Y63         FDRE                                         r  test_hardware/testCount_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.414     0.414 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.480     0.894    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.947 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.534     1.481    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.510 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.856     2.366    test_hardware/clk5
+    SLICE_X63Y63         FDRE                                         r  test_hardware/testCount_reg[16]/C
+                         clock pessimism             -0.548     1.818    
+    SLICE_X63Y63         FDRE (Hold_fdre_C_D)         0.105     1.923    test_hardware/testCount_reg[16]
+  -------------------------------------------------------------------
+                         required time                         -1.923    
+                         arrival time                           2.179    
+  -------------------------------------------------------------------
+                         slack                                  0.256    
+
+Slack (MET) :             0.256ns  (arrival time - required time)
+  Source:                 test_hardware/testCount_reg[20]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            test_hardware/testCount_reg[20]/D
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             clk5_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk5_0 rise@0.000ns - clk5_0 rise@0.000ns)
+  Data Path Delay:        0.361ns  (logic 0.256ns (70.880%)  route 0.105ns (29.120%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.366ns
+    Source Clock Delay      (SCD):    1.818ns
+    Clock Pessimism Removal (CPR):    0.548ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.489     1.206    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.232 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.587     1.818    test_hardware/clk5
+    SLICE_X63Y64         FDRE                                         r  test_hardware/testCount_reg[20]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y64         FDRE (Prop_fdre_C_Q)         0.141     1.959 r  test_hardware/testCount_reg[20]/Q
+                         net (fo=1, routed)           0.105     2.064    test_hardware/testCount_reg_n_0_[20]
+    SLICE_X63Y64         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     2.179 r  test_hardware/testCount_reg[20]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.179    test_hardware/testCount_reg[20]_i_1_n_7
+    SLICE_X63Y64         FDRE                                         r  test_hardware/testCount_reg[20]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.414     0.414 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.480     0.894    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.947 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.534     1.481    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.510 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.856     2.366    test_hardware/clk5
+    SLICE_X63Y64         FDRE                                         r  test_hardware/testCount_reg[20]/C
+                         clock pessimism             -0.548     1.818    
+    SLICE_X63Y64         FDRE (Hold_fdre_C_D)         0.105     1.923    test_hardware/testCount_reg[20]
+  -------------------------------------------------------------------
+                         required time                         -1.923    
+                         arrival time                           2.179    
+  -------------------------------------------------------------------
+                         slack                                  0.256    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk5_0
+Waveform(ns):       { 0.000 100.000 }
+Period(ns):         200.000
+Sources:            { test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     BUFG/I              n/a            2.155         200.000     197.845    BUFGCTRL_X0Y16   test_hardware/clkGen/clkout1_bufg/I
+Min Period        n/a     MMCME2_ADV/CLKOUT0  n/a            1.249         200.000     198.751    MMCME2_ADV_X0Y1  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+Min Period        n/a     FDRE/C              n/a            1.000         200.000     199.000    SLICE_X63Y59     test_hardware/testCount_reg[0]/C
+Min Period        n/a     FDRE/C              n/a            1.000         200.000     199.000    SLICE_X63Y61     test_hardware/testCount_reg[10]/C
+Min Period        n/a     FDRE/C              n/a            1.000         200.000     199.000    SLICE_X63Y61     test_hardware/testCount_reg[11]/C
+Min Period        n/a     FDRE/C              n/a            1.000         200.000     199.000    SLICE_X63Y62     test_hardware/testCount_reg[12]/C
+Min Period        n/a     FDRE/C              n/a            1.000         200.000     199.000    SLICE_X63Y62     test_hardware/testCount_reg[13]/C
+Min Period        n/a     FDRE/C              n/a            1.000         200.000     199.000    SLICE_X63Y62     test_hardware/testCount_reg[14]/C
+Min Period        n/a     FDRE/C              n/a            1.000         200.000     199.000    SLICE_X63Y62     test_hardware/testCount_reg[15]/C
+Min Period        n/a     FDRE/C              n/a            1.000         200.000     199.000    SLICE_X63Y63     test_hardware/testCount_reg[16]/C
+Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       200.000     13.360     MMCME2_ADV_X0Y1  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X63Y59     test_hardware/testCount_reg[0]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X63Y59     test_hardware/testCount_reg[0]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X63Y61     test_hardware/testCount_reg[10]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X63Y61     test_hardware/testCount_reg[10]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X63Y61     test_hardware/testCount_reg[11]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X63Y61     test_hardware/testCount_reg[11]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X63Y62     test_hardware/testCount_reg[12]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X63Y62     test_hardware/testCount_reg[12]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X63Y62     test_hardware/testCount_reg[13]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X63Y62     test_hardware/testCount_reg[13]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X63Y59     test_hardware/testCount_reg[0]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X63Y59     test_hardware/testCount_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X63Y61     test_hardware/testCount_reg[10]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X63Y61     test_hardware/testCount_reg[10]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X63Y61     test_hardware/testCount_reg[11]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X63Y61     test_hardware/testCount_reg[11]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X63Y62     test_hardware/testCount_reg[12]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X63Y62     test_hardware/testCount_reg[12]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X63Y62     test_hardware/testCount_reg[13]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X63Y62     test_hardware/testCount_reg[13]/C
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clkfbout
+  To Clock:  clkfbout
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack       48.751ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clkfbout
+Waveform(ns):       { 0.000 25.000 }
+Period(ns):         50.000
+Sources:            { test_hardware/clkGen/MMCME2_BASE_inst/CLKFBOUT }
+
+Check Type  Corner  Lib Pin              Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            1.249         50.000      48.751     MMCME2_ADV_X0Y1  test_hardware/clkGen/MMCME2_BASE_inst/CLKFBOUT
+Min Period  n/a     MMCME2_ADV/CLKFBIN   n/a            1.249         50.000      48.751     MMCME2_ADV_X0Y1  test_hardware/clkGen/MMCME2_BASE_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBIN   n/a            100.000       50.000      50.000     MMCME2_ADV_X0Y1  test_hardware/clkGen/MMCME2_BASE_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            213.360       50.000      163.360    MMCME2_ADV_X0Y1  test_hardware/clkGen/MMCME2_BASE_inst/CLKFBOUT
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay             2 Endpoints
+Min Delay             2 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 sw[1]
+                            (input port)
+  Destination:            segment0[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        11.148ns  (logic 5.240ns (47.006%)  route 5.908ns (52.994%))
+  Logic Levels:           4  (IBUF=1 LUT6=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U2                                                0.000     0.000 f  sw[1] (IN)
+                         net (fo=0)                   0.000     0.000    sw[1]
+    U2                   IBUF (Prop_ibuf_I_O)         1.454     1.454 f  sw_IBUF[1]_inst/O
+                         net (fo=1, routed)           1.415     2.869    test_hardware/display/counter/sw_IBUF[1]
+    SLICE_X65Y23         LUT6 (Prop_lut6_I3_O)        0.124     2.993 f  test_hardware/display/counter/segment0_OBUF[0]_inst_i_2/O
+                         net (fo=1, routed)           0.836     3.829    test_hardware/display/counter/segment0_OBUF[0]_inst_i_2_n_0
+    SLICE_X65Y26         LUT6 (Prop_lut6_I5_O)        0.124     3.953 r  test_hardware/display/counter/segment0_OBUF[0]_inst_i_1/O
+                         net (fo=2, routed)           3.657     7.610    segment1_OBUF[0]
+    A6                   OBUF (Prop_obuf_I_O)         3.538    11.148 r  segment0_OBUF[0]_inst/O
+                         net (fo=0)                   0.000    11.148    segment0[0]
+    A6                                                                r  segment0[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sw[1]
+                            (input port)
+  Destination:            segment1[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.439ns  (logic 5.230ns (50.101%)  route 5.209ns (49.899%))
+  Logic Levels:           4  (IBUF=1 LUT6=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U2                                                0.000     0.000 f  sw[1] (IN)
+                         net (fo=0)                   0.000     0.000    sw[1]
+    U2                   IBUF (Prop_ibuf_I_O)         1.454     1.454 f  sw_IBUF[1]_inst/O
+                         net (fo=1, routed)           1.415     2.869    test_hardware/display/counter/sw_IBUF[1]
+    SLICE_X65Y23         LUT6 (Prop_lut6_I3_O)        0.124     2.993 f  test_hardware/display/counter/segment0_OBUF[0]_inst_i_2/O
+                         net (fo=1, routed)           0.836     3.829    test_hardware/display/counter/segment0_OBUF[0]_inst_i_2_n_0
+    SLICE_X65Y26         LUT6 (Prop_lut6_I5_O)        0.124     3.953 r  test_hardware/display/counter/segment0_OBUF[0]_inst_i_1/O
+                         net (fo=2, routed)           2.958     6.911    segment1_OBUF[0]
+    C1                   OBUF (Prop_obuf_I_O)         3.528    10.439 r  segment1_OBUF[0]_inst/O
+                         net (fo=0)                   0.000    10.439    segment1[0]
+    C1                                                                r  segment1[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 sw[5]
+                            (input port)
+  Destination:            segment1[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.672ns  (logic 1.489ns (55.750%)  route 1.182ns (44.250%))
+  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R2                                                0.000     0.000 f  sw[5] (IN)
+                         net (fo=0)                   0.000     0.000    sw[5]
+    R2                   IBUF (Prop_ibuf_I_O)         0.216     0.216 f  sw_IBUF[5]_inst/O
+                         net (fo=1, routed)           0.322     0.538    test_hardware/display/counter/sw_IBUF[5]
+    SLICE_X65Y26         LUT6 (Prop_lut6_I1_O)        0.045     0.583 r  test_hardware/display/counter/segment0_OBUF[0]_inst_i_1/O
+                         net (fo=2, routed)           0.860     1.443    segment1_OBUF[0]
+    C1                   OBUF (Prop_obuf_I_O)         1.229     2.672 r  segment1_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     2.672    segment1[0]
+    C1                                                                r  segment1[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sw[5]
+                            (input port)
+  Destination:            segment0[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.961ns  (logic 1.500ns (50.649%)  route 1.461ns (49.351%))
+  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R2                                                0.000     0.000 f  sw[5] (IN)
+                         net (fo=0)                   0.000     0.000    sw[5]
+    R2                   IBUF (Prop_ibuf_I_O)         0.216     0.216 f  sw_IBUF[5]_inst/O
+                         net (fo=1, routed)           0.322     0.538    test_hardware/display/counter/sw_IBUF[5]
+    SLICE_X65Y26         LUT6 (Prop_lut6_I1_O)        0.045     0.583 r  test_hardware/display/counter/segment0_OBUF[0]_inst_i_1/O
+                         net (fo=2, routed)           1.139     1.722    segment1_OBUF[0]
+    A6                   OBUF (Prop_obuf_I_O)         1.239     2.961 r  segment0_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     2.961    segment0[0]
+    A6                                                                r  segment0[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  clk5_0
+  To Clock:  
+
+Max Delay            21 Endpoints
+Min Delay            21 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 test_hardware/display/counter/count_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            segment0[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.977ns  (logic 4.304ns (39.210%)  route 6.673ns (60.790%))
+  Logic Levels:           3  (LUT6=2 OBUF=1)
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458     1.458 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233     2.692    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.780 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.666     4.446    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     4.542 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.619     6.161    test_hardware/display/counter/clk5
+    SLICE_X64Y64         FDRE                                         r  test_hardware/display/counter/count_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y64         FDRE (Prop_fdre_C_Q)         0.518     6.679 r  test_hardware/display/counter/count_reg[0]/Q
+                         net (fo=18, routed)          2.180     8.859    test_hardware/display/counter/count[0]
+    SLICE_X65Y23         LUT6 (Prop_lut6_I4_O)        0.124     8.983 f  test_hardware/display/counter/segment0_OBUF[0]_inst_i_2/O
+                         net (fo=1, routed)           0.836     9.819    test_hardware/display/counter/segment0_OBUF[0]_inst_i_2_n_0
+    SLICE_X65Y26         LUT6 (Prop_lut6_I5_O)        0.124     9.943 r  test_hardware/display/counter/segment0_OBUF[0]_inst_i_1/O
+                         net (fo=2, routed)           3.657    13.600    segment1_OBUF[0]
+    A6                   OBUF (Prop_obuf_I_O)         3.538    17.138 r  segment0_OBUF[0]_inst/O
+                         net (fo=0)                   0.000    17.138    segment0[0]
+    A6                                                                r  segment0[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 test_hardware/display/counter/count_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            segment1[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.268ns  (logic 4.294ns (41.819%)  route 5.974ns (58.181%))
+  Logic Levels:           3  (LUT6=2 OBUF=1)
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458     1.458 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233     2.692    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.780 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.666     4.446    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     4.542 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.619     6.161    test_hardware/display/counter/clk5
+    SLICE_X64Y64         FDRE                                         r  test_hardware/display/counter/count_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y64         FDRE (Prop_fdre_C_Q)         0.518     6.679 r  test_hardware/display/counter/count_reg[0]/Q
+                         net (fo=18, routed)          2.180     8.859    test_hardware/display/counter/count[0]
+    SLICE_X65Y23         LUT6 (Prop_lut6_I4_O)        0.124     8.983 f  test_hardware/display/counter/segment0_OBUF[0]_inst_i_2/O
+                         net (fo=1, routed)           0.836     9.819    test_hardware/display/counter/segment0_OBUF[0]_inst_i_2_n_0
+    SLICE_X65Y26         LUT6 (Prop_lut6_I5_O)        0.124     9.943 r  test_hardware/display/counter/segment0_OBUF[0]_inst_i_1/O
+                         net (fo=2, routed)           2.958    12.901    segment1_OBUF[0]
+    C1                   OBUF (Prop_obuf_I_O)         3.528    16.429 r  segment1_OBUF[0]_inst/O
+                         net (fo=0)                   0.000    16.429    segment1[0]
+    C1                                                                r  segment1[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 test_hardware/display/counter/count_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            segment0[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.151ns  (logic 4.882ns (48.088%)  route 5.270ns (51.912%))
+  Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458     1.458 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233     2.692    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.780 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.666     4.446    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     4.542 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.619     6.161    test_hardware/display/counter/clk5
+    SLICE_X64Y64         FDRE                                         r  test_hardware/display/counter/count_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y64         FDRE (Prop_fdre_C_Q)         0.518     6.679 r  test_hardware/display/counter/count_reg[1]/Q
+                         net (fo=18, routed)          0.922     7.601    test_hardware/display/counter/count[1]
+    SLICE_X62Y65         LUT6 (Prop_lut6_I2_O)        0.124     7.725 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_7/O
+                         net (fo=1, routed)           0.667     8.392    test_hardware/display/counter/segment0_OBUF[7]_inst_i_7_n_0
+    SLICE_X62Y65         LUT5 (Prop_lut5_I0_O)        0.152     8.544 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_3/O
+                         net (fo=7, routed)           0.981     9.526    test_hardware/display/counter/sel0[2]
+    SLICE_X64Y67         LUT4 (Prop_lut4_I2_O)        0.361     9.887 r  test_hardware/display/counter/segment0_OBUF[1]_inst_i_1/O
+                         net (fo=2, routed)           2.699    12.586    segment1_OBUF[1]
+    B5                   OBUF (Prop_obuf_I_O)         3.727    16.312 r  segment0_OBUF[1]_inst/O
+                         net (fo=0)                   0.000    16.312    segment0[1]
+    B5                                                                r  segment0[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 test_hardware/display/counter/count_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            segment0[7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.011ns  (logic 4.652ns (46.466%)  route 5.359ns (53.534%))
+  Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458     1.458 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233     2.692    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.780 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.666     4.446    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     4.542 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.619     6.161    test_hardware/display/counter/clk5
+    SLICE_X64Y64         FDRE                                         r  test_hardware/display/counter/count_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y64         FDRE (Prop_fdre_C_Q)         0.518     6.679 r  test_hardware/display/counter/count_reg[1]/Q
+                         net (fo=18, routed)          0.922     7.601    test_hardware/display/counter/count[1]
+    SLICE_X62Y65         LUT6 (Prop_lut6_I2_O)        0.124     7.725 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_7/O
+                         net (fo=1, routed)           0.667     8.392    test_hardware/display/counter/segment0_OBUF[7]_inst_i_7_n_0
+    SLICE_X62Y65         LUT5 (Prop_lut5_I0_O)        0.152     8.544 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_3/O
+                         net (fo=7, routed)           0.981     9.526    test_hardware/display/counter/sel0[2]
+    SLICE_X64Y67         LUT4 (Prop_lut4_I1_O)        0.332     9.858 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_1/O
+                         net (fo=2, routed)           2.788    12.646    segment1_OBUF[7]
+    D7                   OBUF (Prop_obuf_I_O)         3.526    16.172 r  segment0_OBUF[7]_inst/O
+                         net (fo=0)                   0.000    16.172    segment0[7]
+    D7                                                                r  segment0[7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 test_hardware/testCount_reg[25]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            segment0[4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.983ns  (logic 4.790ns (47.979%)  route 5.193ns (52.021%))
+  Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458     1.458 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233     2.692    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.780 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.666     4.446    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     4.542 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.617     6.159    test_hardware/clk5
+    SLICE_X63Y65         FDRE                                         r  test_hardware/testCount_reg[25]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y65         FDRE (Prop_fdre_C_Q)         0.456     6.615 r  test_hardware/testCount_reg[25]/Q
+                         net (fo=5, routed)           1.088     7.703    test_hardware/display/counter/testCount_reg[3]
+    SLICE_X62Y65         LUT6 (Prop_lut6_I5_O)        0.124     7.827 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_6/O
+                         net (fo=1, routed)           0.484     8.311    test_hardware/display/counter/segment0_OBUF[7]_inst_i_6_n_0
+    SLICE_X62Y65         LUT5 (Prop_lut5_I0_O)        0.118     8.429 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_2/O
+                         net (fo=7, routed)           0.982     9.411    test_hardware/display/counter/sel0[3]
+    SLICE_X64Y67         LUT4 (Prop_lut4_I0_O)        0.348     9.759 r  test_hardware/display/counter/segment0_OBUF[4]_inst_i_1/O
+                         net (fo=2, routed)           2.639    12.398    segment1_OBUF[4]
+    B7                   OBUF (Prop_obuf_I_O)         3.744    16.142 r  segment0_OBUF[4]_inst/O
+                         net (fo=0)                   0.000    16.142    segment0[4]
+    B7                                                                r  segment0[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 test_hardware/testCount_reg[25]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            segment0[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.746ns  (logic 4.559ns (46.776%)  route 5.187ns (53.224%))
+  Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458     1.458 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233     2.692    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.780 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.666     4.446    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     4.542 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.617     6.159    test_hardware/clk5
+    SLICE_X63Y65         FDRE                                         r  test_hardware/testCount_reg[25]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y65         FDRE (Prop_fdre_C_Q)         0.456     6.615 f  test_hardware/testCount_reg[25]/Q
+                         net (fo=5, routed)           1.088     7.703    test_hardware/display/counter/testCount_reg[3]
+    SLICE_X62Y65         LUT6 (Prop_lut6_I5_O)        0.124     7.827 f  test_hardware/display/counter/segment0_OBUF[7]_inst_i_6/O
+                         net (fo=1, routed)           0.484     8.311    test_hardware/display/counter/segment0_OBUF[7]_inst_i_6_n_0
+    SLICE_X62Y65         LUT5 (Prop_lut5_I0_O)        0.118     8.429 f  test_hardware/display/counter/segment0_OBUF[7]_inst_i_2/O
+                         net (fo=7, routed)           0.840     9.269    test_hardware/display/counter/sel0[3]
+    SLICE_X64Y67         LUT4 (Prop_lut4_I0_O)        0.326     9.595 r  test_hardware/display/counter/segment0_OBUF[3]_inst_i_1/O
+                         net (fo=2, routed)           2.775    12.370    segment1_OBUF[3]
+    A7                   OBUF (Prop_obuf_I_O)         3.535    15.905 r  segment0_OBUF[3]_inst/O
+                         net (fo=0)                   0.000    15.905    segment0[3]
+    A7                                                                r  segment0[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 test_hardware/testCount_reg[25]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            segment0[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.613ns  (logic 4.817ns (50.107%)  route 4.796ns (49.893%))
+  Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458     1.458 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233     2.692    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.780 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.666     4.446    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     4.542 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.617     6.159    test_hardware/clk5
+    SLICE_X63Y65         FDRE                                         r  test_hardware/testCount_reg[25]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y65         FDRE (Prop_fdre_C_Q)         0.456     6.615 r  test_hardware/testCount_reg[25]/Q
+                         net (fo=5, routed)           1.088     7.703    test_hardware/display/counter/testCount_reg[3]
+    SLICE_X62Y65         LUT6 (Prop_lut6_I5_O)        0.124     7.827 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_6/O
+                         net (fo=1, routed)           0.484     8.311    test_hardware/display/counter/segment0_OBUF[7]_inst_i_6_n_0
+    SLICE_X62Y65         LUT5 (Prop_lut5_I0_O)        0.118     8.429 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_2/O
+                         net (fo=7, routed)           0.840     9.269    test_hardware/display/counter/sel0[3]
+    SLICE_X64Y67         LUT4 (Prop_lut4_I0_O)        0.352     9.621 r  test_hardware/display/counter/segment0_OBUF[5]_inst_i_1/O
+                         net (fo=2, routed)           2.384    12.005    segment1_OBUF[5]
+    A5                   OBUF (Prop_obuf_I_O)         3.767    15.772 r  segment0_OBUF[5]_inst/O
+                         net (fo=0)                   0.000    15.772    segment0[5]
+    A5                                                                r  segment0[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 test_hardware/testCount_reg[25]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            segment0[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.594ns  (logic 4.539ns (47.307%)  route 5.055ns (52.693%))
+  Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458     1.458 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233     2.692    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.780 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.666     4.446    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     4.542 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.617     6.159    test_hardware/clk5
+    SLICE_X63Y65         FDRE                                         r  test_hardware/testCount_reg[25]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y65         FDRE (Prop_fdre_C_Q)         0.456     6.615 r  test_hardware/testCount_reg[25]/Q
+                         net (fo=5, routed)           1.088     7.703    test_hardware/display/counter/testCount_reg[3]
+    SLICE_X62Y65         LUT6 (Prop_lut6_I5_O)        0.124     7.827 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_6/O
+                         net (fo=1, routed)           0.484     8.311    test_hardware/display/counter/segment0_OBUF[7]_inst_i_6_n_0
+    SLICE_X62Y65         LUT5 (Prop_lut5_I0_O)        0.118     8.429 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_2/O
+                         net (fo=7, routed)           0.982     9.411    test_hardware/display/counter/sel0[3]
+    SLICE_X64Y67         LUT4 (Prop_lut4_I0_O)        0.326     9.737 r  test_hardware/display/counter/segment0_OBUF[2]_inst_i_1/O
+                         net (fo=2, routed)           2.501    12.238    segment1_OBUF[2]
+    D6                   OBUF (Prop_obuf_I_O)         3.515    15.753 r  segment0_OBUF[2]_inst/O
+                         net (fo=0)                   0.000    15.753    segment0[2]
+    D6                                                                r  segment0[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 test_hardware/display/counter/count_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            segment0[6]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.399ns  (logic 4.604ns (48.979%)  route 4.796ns (51.021%))
+  Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458     1.458 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233     2.692    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.780 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.666     4.446    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     4.542 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.619     6.161    test_hardware/display/counter/clk5
+    SLICE_X64Y64         FDRE                                         r  test_hardware/display/counter/count_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y64         FDRE (Prop_fdre_C_Q)         0.518     6.679 r  test_hardware/display/counter/count_reg[0]/Q
+                         net (fo=18, routed)          0.881     7.560    test_hardware/display/counter/count[0]
+    SLICE_X64Y65         LUT6 (Prop_lut6_I4_O)        0.124     7.684 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_9/O
+                         net (fo=1, routed)           0.483     8.167    test_hardware/display/counter/segment0_OBUF[7]_inst_i_9_n_0
+    SLICE_X64Y65         LUT5 (Prop_lut5_I0_O)        0.116     8.283 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_5/O
+                         net (fo=7, routed)           0.988     9.271    test_hardware/display/counter/sel0[1]
+    SLICE_X64Y66         LUT4 (Prop_lut4_I3_O)        0.328     9.599 r  test_hardware/display/counter/segment0_OBUF[6]_inst_i_1/O
+                         net (fo=2, routed)           2.443    12.043    segment1_OBUF[6]
+    C5                   OBUF (Prop_obuf_I_O)         3.518    15.560 r  segment0_OBUF[6]_inst/O
+                         net (fo=0)                   0.000    15.560    segment0[6]
+    C5                                                                r  segment0[6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 test_hardware/display/counter/count_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            segment1[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.330ns  (logic 4.882ns (52.328%)  route 4.448ns (47.672%))
+  Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458     1.458 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233     2.692    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.780 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.666     4.446    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     4.542 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.619     6.161    test_hardware/display/counter/clk5
+    SLICE_X64Y64         FDRE                                         r  test_hardware/display/counter/count_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y64         FDRE (Prop_fdre_C_Q)         0.518     6.679 r  test_hardware/display/counter/count_reg[1]/Q
+                         net (fo=18, routed)          0.922     7.601    test_hardware/display/counter/count[1]
+    SLICE_X62Y65         LUT6 (Prop_lut6_I2_O)        0.124     7.725 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_7/O
+                         net (fo=1, routed)           0.667     8.392    test_hardware/display/counter/segment0_OBUF[7]_inst_i_7_n_0
+    SLICE_X62Y65         LUT5 (Prop_lut5_I0_O)        0.152     8.544 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_3/O
+                         net (fo=7, routed)           0.981     9.526    test_hardware/display/counter/sel0[2]
+    SLICE_X64Y67         LUT4 (Prop_lut4_I2_O)        0.361     9.887 r  test_hardware/display/counter/segment0_OBUF[1]_inst_i_1/O
+                         net (fo=2, routed)           1.877    11.764    segment1_OBUF[1]
+    D1                   OBUF (Prop_obuf_I_O)         3.727    15.491 r  segment1_OBUF[1]_inst/O
+                         net (fo=0)                   0.000    15.491    segment1[1]
+    D1                                                                r  segment1[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 test_hardware/display/counter/count_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            digit1[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.028ns  (logic 1.402ns (69.122%)  route 0.626ns (30.878%))
+  Logic Levels:           2  (LUT3=1 OBUF=1)
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.489     1.206    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.232 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.587     1.818    test_hardware/display/counter/clk5
+    SLICE_X64Y64         FDRE                                         r  test_hardware/display/counter/count_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y64         FDRE (Prop_fdre_C_Q)         0.164     1.982 r  test_hardware/display/counter/count_reg[1]/Q
+                         net (fo=18, routed)          0.281     2.263    test_hardware/display/counter/count[1]
+    SLICE_X62Y65         LUT3 (Prop_lut3_I0_O)        0.045     2.308 r  test_hardware/display/counter/digit1_OBUF[1]_inst_i_1/O
+                         net (fo=1, routed)           0.346     2.653    digit1_OBUF[1]
+    J4                   OBUF (Prop_obuf_I_O)         1.193     3.846 r  digit1_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     3.846    digit1[1]
+    J4                                                                r  digit1[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 test_hardware/display/counter/count_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            digit1[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.089ns  (logic 1.470ns (70.357%)  route 0.619ns (29.643%))
+  Logic Levels:           2  (LUT3=1 OBUF=1)
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.489     1.206    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.232 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.587     1.818    test_hardware/display/counter/clk5
+    SLICE_X64Y64         FDRE                                         r  test_hardware/display/counter/count_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y64         FDRE (Prop_fdre_C_Q)         0.148     1.966 r  test_hardware/display/counter/count_reg[2]/Q
+                         net (fo=12, routed)          0.188     2.155    test_hardware/display/counter/count[2]
+    SLICE_X64Y64         LUT3 (Prop_lut3_I2_O)        0.098     2.253 r  test_hardware/display/counter/digit1_OBUF[3]_inst_i_1/O
+                         net (fo=1, routed)           0.431     2.683    digit1_OBUF[3]
+    E4                   OBUF (Prop_obuf_I_O)         1.224     3.907 r  digit1_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     3.907    digit1[3]
+    E4                                                                r  digit1[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 test_hardware/display/counter/count_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            digit1[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.142ns  (logic 1.421ns (66.364%)  route 0.720ns (33.636%))
+  Logic Levels:           2  (LUT3=1 OBUF=1)
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.489     1.206    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.232 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.587     1.818    test_hardware/display/counter/clk5
+    SLICE_X64Y64         FDRE                                         r  test_hardware/display/counter/count_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y64         FDRE (Prop_fdre_C_Q)         0.164     1.982 r  test_hardware/display/counter/count_reg[0]/Q
+                         net (fo=18, routed)          0.324     2.306    test_hardware/display/counter/count[0]
+    SLICE_X62Y65         LUT3 (Prop_lut3_I2_O)        0.045     2.351 r  test_hardware/display/counter/digit1_OBUF[0]_inst_i_1/O
+                         net (fo=1, routed)           0.396     2.748    digit1_OBUF[0]
+    H3                   OBUF (Prop_obuf_I_O)         1.212     3.960 r  digit1_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     3.960    digit1[0]
+    H3                                                                r  digit1[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 test_hardware/display/counter/count_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            digit1[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.165ns  (logic 1.475ns (68.131%)  route 0.690ns (31.869%))
+  Logic Levels:           2  (LUT3=1 OBUF=1)
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.489     1.206    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.232 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.587     1.818    test_hardware/display/counter/clk5
+    SLICE_X64Y64         FDRE                                         r  test_hardware/display/counter/count_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y64         FDRE (Prop_fdre_C_Q)         0.148     1.966 r  test_hardware/display/counter/count_reg[2]/Q
+                         net (fo=12, routed)          0.272     2.238    test_hardware/display/counter/count[2]
+    SLICE_X64Y65         LUT3 (Prop_lut3_I0_O)        0.098     2.336 r  test_hardware/display/counter/digit1_OBUF[2]_inst_i_1/O
+                         net (fo=1, routed)           0.418     2.754    digit1_OBUF[2]
+    F3                   OBUF (Prop_obuf_I_O)         1.229     3.984 r  digit1_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     3.984    digit1[2]
+    F3                                                                r  digit1[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 test_hardware/testCount_reg[22]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            segment1[6]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.245ns  (logic 1.466ns (65.294%)  route 0.779ns (34.706%))
+  Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.489     1.206    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.232 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.587     1.818    test_hardware/clk5
+    SLICE_X63Y64         FDRE                                         r  test_hardware/testCount_reg[22]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y64         FDRE (Prop_fdre_C_Q)         0.141     1.959 r  test_hardware/testCount_reg[22]/Q
+                         net (fo=2, routed)           0.069     2.029    test_hardware/display/counter/testCount_reg[0]
+    SLICE_X62Y64         LUT6 (Prop_lut6_I5_O)        0.045     2.074 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_8/O
+                         net (fo=1, routed)           0.134     2.207    test_hardware/display/counter/segment0_OBUF[7]_inst_i_8_n_0
+    SLICE_X64Y65         LUT5 (Prop_lut5_I0_O)        0.045     2.252 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_4/O
+                         net (fo=7, routed)           0.153     2.405    test_hardware/display/counter/sel0[0]
+    SLICE_X64Y66         LUT4 (Prop_lut4_I2_O)        0.045     2.450 r  test_hardware/display/counter/segment0_OBUF[6]_inst_i_1/O
+                         net (fo=2, routed)           0.423     2.873    segment1_OBUF[6]
+    J3                   OBUF (Prop_obuf_I_O)         1.190     4.063 r  segment1_OBUF[6]_inst/O
+                         net (fo=0)                   0.000     4.063    segment1[6]
+    J3                                                                r  segment1[6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 test_hardware/testCount_reg[28]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            segment1[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.368ns  (logic 1.623ns (68.550%)  route 0.745ns (31.450%))
+  Logic Levels:           3  (LUT4=1 LUT5=1 OBUF=1)
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.489     1.206    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.232 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.586     1.817    test_hardware/clk5
+    SLICE_X63Y66         FDRE                                         r  test_hardware/testCount_reg[28]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y66         FDRE (Prop_fdre_C_Q)         0.141     1.958 r  test_hardware/testCount_reg[28]/Q
+                         net (fo=3, routed)           0.176     2.135    test_hardware/display/counter/testCount_reg[6]
+    SLICE_X62Y65         LUT5 (Prop_lut5_I3_O)        0.049     2.184 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_3/O
+                         net (fo=7, routed)           0.228     2.412    test_hardware/display/counter/sel0[2]
+    SLICE_X64Y67         LUT4 (Prop_lut4_I3_O)        0.115     2.527 r  test_hardware/display/counter/segment0_OBUF[5]_inst_i_1/O
+                         net (fo=2, routed)           0.340     2.867    segment1_OBUF[5]
+    D2                   OBUF (Prop_obuf_I_O)         1.318     4.185 r  segment1_OBUF[5]_inst/O
+                         net (fo=0)                   0.000     4.185    segment1[5]
+    D2                                                                r  segment1[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 test_hardware/testCount_reg[28]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            segment1[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.405ns  (logic 1.533ns (63.769%)  route 0.871ns (36.231%))
+  Logic Levels:           3  (LUT4=1 LUT5=1 OBUF=1)
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.489     1.206    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.232 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.586     1.817    test_hardware/clk5
+    SLICE_X63Y66         FDRE                                         r  test_hardware/testCount_reg[28]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y66         FDRE (Prop_fdre_C_Q)         0.141     1.958 r  test_hardware/testCount_reg[28]/Q
+                         net (fo=3, routed)           0.176     2.135    test_hardware/display/counter/testCount_reg[6]
+    SLICE_X62Y65         LUT5 (Prop_lut5_I3_O)        0.049     2.184 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_3/O
+                         net (fo=7, routed)           0.228     2.412    test_hardware/display/counter/sel0[2]
+    SLICE_X64Y67         LUT4 (Prop_lut4_I2_O)        0.112     2.524 r  test_hardware/display/counter/segment0_OBUF[3]_inst_i_1/O
+                         net (fo=2, routed)           0.467     2.991    segment1_OBUF[3]
+    B1                   OBUF (Prop_obuf_I_O)         1.231     4.222 r  segment1_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     4.222    segment1[3]
+    B1                                                                r  segment1[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 test_hardware/testCount_reg[22]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            segment1[7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.436ns  (logic 1.502ns (61.635%)  route 0.935ns (38.365%))
+  Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.489     1.206    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.232 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.587     1.818    test_hardware/clk5
+    SLICE_X63Y64         FDRE                                         r  test_hardware/testCount_reg[22]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y64         FDRE (Prop_fdre_C_Q)         0.141     1.959 r  test_hardware/testCount_reg[22]/Q
+                         net (fo=2, routed)           0.069     2.029    test_hardware/display/counter/testCount_reg[0]
+    SLICE_X62Y64         LUT6 (Prop_lut6_I5_O)        0.045     2.074 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_8/O
+                         net (fo=1, routed)           0.134     2.207    test_hardware/display/counter/segment0_OBUF[7]_inst_i_8_n_0
+    SLICE_X64Y65         LUT5 (Prop_lut5_I0_O)        0.045     2.252 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_4/O
+                         net (fo=7, routed)           0.313     2.565    test_hardware/display/counter/sel0[0]
+    SLICE_X64Y67         LUT4 (Prop_lut4_I2_O)        0.045     2.610 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_1/O
+                         net (fo=2, routed)           0.419     3.029    segment1_OBUF[7]
+    F4                   OBUF (Prop_obuf_I_O)         1.226     4.255 r  segment1_OBUF[7]_inst/O
+                         net (fo=0)                   0.000     4.255    segment1[7]
+    F4                                                                r  segment1[7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 test_hardware/testCount_reg[22]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            segment1[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.437ns  (logic 1.485ns (60.919%)  route 0.952ns (39.081%))
+  Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.489     1.206    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.232 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.587     1.818    test_hardware/clk5
+    SLICE_X63Y64         FDRE                                         r  test_hardware/testCount_reg[22]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y64         FDRE (Prop_fdre_C_Q)         0.141     1.959 r  test_hardware/testCount_reg[22]/Q
+                         net (fo=2, routed)           0.069     2.029    test_hardware/display/counter/testCount_reg[0]
+    SLICE_X62Y64         LUT6 (Prop_lut6_I5_O)        0.045     2.074 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_8/O
+                         net (fo=1, routed)           0.134     2.207    test_hardware/display/counter/segment0_OBUF[7]_inst_i_8_n_0
+    SLICE_X64Y65         LUT5 (Prop_lut5_I0_O)        0.045     2.252 r  test_hardware/display/counter/segment0_OBUF[7]_inst_i_4/O
+                         net (fo=7, routed)           0.230     2.483    test_hardware/display/counter/sel0[0]
+    SLICE_X64Y67         LUT4 (Prop_lut4_I2_O)        0.045     2.528 r  test_hardware/display/counter/segment0_OBUF[2]_inst_i_1/O
+                         net (fo=2, routed)           0.519     3.047    segment1_OBUF[2]
+    H4                   OBUF (Prop_obuf_I_O)         1.209     4.255 r  segment1_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     4.255    segment1[2]
+    H4                                                                r  segment1[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 test_hardware/display/counter/count_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            digit0[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.488ns  (logic 1.504ns (60.448%)  route 0.984ns (39.552%))
+  Logic Levels:           2  (LUT3=1 OBUF=1)
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.489     1.206    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.232 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.587     1.818    test_hardware/display/counter/clk5
+    SLICE_X64Y64         FDRE                                         r  test_hardware/display/counter/count_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y64         FDRE (Prop_fdre_C_Q)         0.164     1.982 r  test_hardware/display/counter/count_reg[1]/Q
+                         net (fo=18, routed)          0.274     2.256    test_hardware/display/counter/count[1]
+    SLICE_X64Y65         LUT3 (Prop_lut3_I0_O)        0.047     2.303 r  test_hardware/display/counter/digit0_OBUF[0]_inst_i_1/O
+                         net (fo=1, routed)           0.710     3.013    digit0_OBUF[0]
+    D5                   OBUF (Prop_obuf_I_O)         1.293     4.306 r  digit0_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     4.306    digit0[0]
+    D5                                                                r  digit0[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  clkfbout
+  To Clock:  
+
+Max Delay             1 Endpoint
+Min Delay             1 Endpoint
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 test_hardware/clkGen/MMCME2_BASE_inst/CLKFBOUT
+                            (clock source 'clkfbout'  {rise@0.000ns fall@25.000ns period=50.000ns})
+  Destination:            test_hardware/clkGen/MMCME2_BASE_inst/CLKFBIN
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        0.014ns  (logic 0.000ns (0.000%)  route 0.014ns (100.004%))
+  Logic Levels:           0  
+  Clock Uncertainty:      0.478ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.257ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkfbout fall edge)
+                                                     25.000    25.000 f  
+    F14                                               0.000    25.000 f  clk100 (IN)
+                         net (fo=0)                   0.000    25.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.458    26.458 f  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.233    27.692    test_hardware/clkGen/clk100buf
+  -------------------------------------------------------------------    -------------------
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                      0.088    27.780 f  test_hardware/clkGen/MMCME2_BASE_inst/CLKFBOUT
+                         net (fo=1, routed)           0.014    27.794    test_hardware/clkGen/clkfbout
+    MMCME2_ADV_X0Y1      MMCME2_ADV                                   f  test_hardware/clkGen/MMCME2_BASE_inst/CLKFBIN
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 test_hardware/clkGen/MMCME2_BASE_inst/CLKFBOUT
+                            (clock source 'clkfbout'  {rise@0.000ns fall@25.000ns period=50.000ns})
+  Destination:            test_hardware/clkGen/MMCME2_BASE_inst/CLKFBIN
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.005ns  (logic 0.000ns (0.000%)  route 0.005ns (100.000%))
+  Logic Levels:           0  
+  Clock Uncertainty:      0.478ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.257ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkfbout rise edge)
+                                                      0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.440     0.667    test_hardware/clkGen/clk100buf
+  -------------------------------------------------------------------    -------------------
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                      0.050     0.717 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKFBOUT
+                         net (fo=1, routed)           0.005     0.722    test_hardware/clkGen/clkfbout
+    MMCME2_ADV_X0Y1      MMCME2_ADV                                   r  test_hardware/clkGen/MMCME2_BASE_inst/CLKFBIN
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  clk5_0
+
+Max Delay             1 Endpoint
+Min Delay             1 Endpoint
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 rstPB
+                            (input port)
+  Destination:            test_hardware/clkGen/resetFFn_reg/CLR
+                            (recovery check against rising-edge clock clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        3.547ns  (logic 1.580ns (44.554%)  route 1.967ns (55.446%))
+  Logic Levels:           2  (IBUF=1 LUT2=1)
+  Clock Path Skew:        5.814ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.814ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.635ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.574ns
+    Phase Error              (PE):    0.347ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    J2                                                0.000     0.000 f  rstPB (IN)
+                         net (fo=0)                   0.000     0.000    rstPB
+    J2                   IBUF (Prop_ibuf_I_O)         1.456     1.456 f  rstPB_IBUF_inst/O
+                         net (fo=1, routed)           1.242     2.699    test_hardware/clkGen/rstPB_IBUF
+    SLICE_X60Y54         LUT2 (Prop_lut2_I0_O)        0.124     2.823 f  test_hardware/clkGen/resetFFn_i_1/O
+                         net (fo=1, routed)           0.724     3.547    test_hardware/clkGen/resetFFn_i_1_n_0
+    SLICE_X60Y60         FDCE                                         f  test_hardware/clkGen/resetFFn_reg/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         1.388     1.388 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           1.162     2.550    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     2.633 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.587     4.220    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     4.311 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          1.503     5.814    test_hardware/clkGen/clk5
+    SLICE_X60Y60         FDCE                                         r  test_hardware/clkGen/resetFFn_reg/C
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 rstPB
+                            (input port)
+  Destination:            test_hardware/clkGen/resetFFn_reg/CLR
+                            (removal check against rising-edge clock clk5_0  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        0.991ns  (logic 0.270ns (27.189%)  route 0.722ns (72.811%))
+  Logic Levels:           2  (IBUF=1 LUT2=1)
+  Clock Path Skew:        2.367ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.367ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    J2                                                0.000     0.000 f  rstPB (IN)
+                         net (fo=0)                   0.000     0.000    rstPB
+    J2                   IBUF (Prop_ibuf_I_O)         0.225     0.225 f  rstPB_IBUF_inst/O
+                         net (fo=1, routed)           0.465     0.690    test_hardware/clkGen/rstPB_IBUF
+    SLICE_X60Y54         LUT2 (Prop_lut2_I0_O)        0.045     0.735 f  test_hardware/clkGen/resetFFn_i_1/O
+                         net (fo=1, routed)           0.256     0.991    test_hardware/clkGen/resetFFn_i_1_n_0
+    SLICE_X60Y60         FDCE                                         f  test_hardware/clkGen/resetFFn_reg/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk5_0 rise edge)     0.000     0.000 r  
+    F14                                               0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    test_hardware/clkGen/clk100
+    F14                  IBUF (Prop_ibuf_I_O)         0.414     0.414 r  test_hardware/clkGen/clkin_ibuf/O
+                         net (fo=1, routed)           0.480     0.894    test_hardware/clkGen/clk100buf
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.947 r  test_hardware/clkGen/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.534     1.481    test_hardware/clkGen/clk5_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.510 r  test_hardware/clkGen/clkout1_bufg/O
+                         net (fo=44, routed)          0.858     2.367    test_hardware/clkGen/clk5
+    SLICE_X60Y60         FDCE                                         r  test_hardware/clkGen/resetFFn_reg/C
+
+
+
+
+

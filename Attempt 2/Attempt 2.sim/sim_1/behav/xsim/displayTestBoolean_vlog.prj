@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Attempt 2.srcs/sources_1/imports/Attempt 2/5Cycle.v" \
+"../../../../Attempt 2.srcs/sources_1/imports/Attempt 2/Choose_4_bit.v" \
+"../../../../Attempt 2.srcs/sources_1/imports/Attempt 2/Choose_Dot.v" \
+"../../../../Attempt 2.srcs/sources_1/imports/Attempt 2/Digit.v" \
+"../../../../Attempt 2.srcs/sources_1/imports/Attempt 2/DigitSignal.v" \
+"../../../../Attempt 2.srcs/sources_1/imports/Attempt 2/Merge_8_bit.v" \
+"../../../../Attempt 2.srcs/sources_1/imports/FPGA_Stuff/clockReset.v" \
+"../../../../Attempt 2.srcs/sources_1/imports/FPGA_Stuff/displayTest.v" \
+"../../../../Attempt 2.srcs/sources_1/imports/FPGA_Stuff/hex2seg.v" \
+"../../../../Attempt 2.srcs/sources_1/imports/Attempt 2/displayTestBoolean.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

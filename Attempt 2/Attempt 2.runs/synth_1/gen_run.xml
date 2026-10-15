@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1792023019">
+  <File Type="PA-TCL" Name="displayTestBoolean.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="displayTestBoolean_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="displayTestBoolean_reports.tcl"/>
+  <File Type="RDS-RDS" Name="displayTestBoolean.vds"/>
+  <File Type="RDS-UTIL" Name="displayTestBoolean_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="displayTestBoolean_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="displayTestBoolean.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="displayTestBoolean_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="displayTestBoolean_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/Attempt 2/5Cycle.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/5Cycle.v"/>
+        <Attr Name="ImportTime" Val="1792002718"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Attempt 2/Choose_4_bit.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Choose_4_bit.v"/>
+        <Attr Name="ImportTime" Val="1792021459"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Attempt 2/Choose_Dot.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Choose_Dot.v"/>
+        <Attr Name="ImportTime" Val="1792003014"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Attempt 2/Digit.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Digit.v"/>
+        <Attr Name="ImportTime" Val="1792007733"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Attempt 2/DigitSignal.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/DigitSignal.v"/>
+        <Attr Name="ImportTime" Val="1792000442"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Attempt 2/Merge_8_bit.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Merge_8_bit.v"/>
+        <Attr Name="ImportTime" Val="1792003087"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/clockReset.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../clockReset.v"/>
+        <Attr Name="ImportTime" Val="1791130695"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/displayTest.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../displayTest.v"/>
+        <Attr Name="ImportTime" Val="1791130695"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA_Stuff/hex2seg.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../hex2seg.v"/>
+        <Attr Name="ImportTime" Val="1791130695"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Attempt 2/displayTestBoolean.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/displayTestBoolean.v"/>
+        <Attr Name="ImportTime" Val="1792022850"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="displayTestBoolean"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Attempt 2/Boolean_Display.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Boolean_Display.xdc"/>
+        <Attr Name="ImportTime" Val="1792022843"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
